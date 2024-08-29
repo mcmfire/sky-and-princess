@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'PoppinsLight';
+  src: url('../public/fonts/Poppins/light.otf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'AmsterdamSignatureRegular';
+  src: url('../public/fonts/AmsterdamSignature/regular.ttf');
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply
+    text-white
+    bg-white;
+}
+
+section {
+  @apply
+    flex 
+    min-h-screen h-screen
+    overflow-hidden;
+}
+
+section:first-child {
+  background-image: url('../public/images/hero.webp');
+
+  @apply
+    bg-white bg-cover bg-top;
+}
+
+section:first-child h1 {
+  font-family: 'AmsterdamSignatureRegular';
+}
+
+section:first-child p {
+  font-family: 'PoppinsLight', sans-serif;
 }
