@@ -12,24 +12,27 @@
   src: url('../public/fonts/AmsterdamSignature/regular.ttf');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply
     text-white
     bg-white;
 }
 
+main {
+  @apply
+    flex flex-col
+    min-h-screen;
+}
+
 section {
   @apply
     flex 
-    min-h-screen h-screen
+    w-full min-h-screen h-screen
     overflow-hidden;
-}
-
-section:first-child {
-  background-image: url('../public/images/hero.webp');
-
-  @apply
-    bg-white bg-cover bg-top;
 }
 
 section:first-child h1 {
@@ -38,4 +41,35 @@ section:first-child h1 {
 
 section:first-child p {
   font-family: 'PoppinsLight', sans-serif;
+}
+
+nav {
+  font-family: 'PoppinsLight', sans-serif;
+  
+  @apply
+    z-50
+    top-0
+    sticky flex
+    items-center
+    p-4
+    bg-gradient-to-tl from-slate-900 to-slate-800;
+}
+
+nav ul {
+  @apply
+    flex w-full 
+    justify-around;
+}
+
+nav ul li {
+  @apply
+    flex flex-col
+    font-bold;
+}
+
+nav ul li:hover hr {
+  @apply
+    w-full
+    transition-all
+    duration-500;
 }

@@ -1,9 +1,11 @@
+import Navbar from "@/components/elements/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
+      <Navbar />
     </main>
   );
 }

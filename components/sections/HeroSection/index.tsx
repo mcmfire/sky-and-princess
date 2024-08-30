@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { animateHeroTitle, animateSAPLogo } from "./animation";
+import HeroImage from "@/public/images/hero.webp";
 import SapLogoImage from "@/public/images/sap-logo.webp";
 
 const HeroSection = () => {
@@ -22,8 +23,8 @@ const HeroSection = () => {
     }, {});
 
     return (
-        <section className="flex-col">
-            <div className="flex flex-col justify-center items-center w-full h-full bg-black bg-opacity-60">
+        <section className="relative flex-col">
+            <div className="z-10 flex flex-col justify-center items-center w-full h-full bg-black bg-opacity-20">
                 <div className="flex flex-col justify-center items-center">
                     <Image ref={sapLogoRef} src={SapLogoImage} alt="SAP Logo" className="w-32 h-auto translate-y-full" />
                     <div id="hero-title-container" className="opacity-0">
@@ -36,6 +37,8 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
+            <Image src={HeroImage} alt="Hero" className="absolute w-full h-full" 
+                layout="fill" objectFit="cover" objectPosition="center"/>
         </section>
     );
 };
