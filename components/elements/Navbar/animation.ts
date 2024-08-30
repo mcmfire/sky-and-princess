@@ -25,7 +25,7 @@ export const animateNavbarLinks = () => {
     });
 
     const navbarLinkHRsWidthAnimation = navbarLinkHRs.map((navbarLinkHR, index) => {
-        const sections = ["#portfolio-section"];
+        const sections = ["#portfolio-section", "#program-section"];
 
         return gsap.fromTo(navbarLinkHR, {
             width: "0",
@@ -35,7 +35,7 @@ export const animateNavbarLinks = () => {
             scrollTrigger: {
                 trigger: sections[index],
                 start: "top 50%",
-                end: "bottom 50%",
+                end: `bottom ${index === navbarLinkHRs.length - 1 ? "100%" : "50%"}`,
                 scrub: true,
             }
         });

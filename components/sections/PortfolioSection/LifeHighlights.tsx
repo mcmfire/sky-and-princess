@@ -14,7 +14,7 @@ const LifeHighlights = () => {
 
     return (
         <div className="flex max-sm:flex-col justify-evenly items-center w-full text-white bg-[--theme-color-bg] text-center">
-            <div className="highlights flex flex-col justify-center items-center sm:w-1/3 max-sm:w-full max-sm:h-1/3 p-10 gap-3">
+            <div className="highlights flex flex-col justify-center items-center sm:w-1/3 max-sm:w-full max-sm:h-1/3 sm:p-20 max-sm:p-10 gap-3">
                 <MdAddBusiness className="text-5xl" />
                 <div className="flex flex-col w-full">
                     <h3 className="font-[PoppinsLight] font-bold text-2xl">
@@ -25,7 +25,7 @@ const LifeHighlights = () => {
                     </p>
                 </div>
             </div>
-            <div className="highlights flex flex-col justify-center items-center sm:w-1/3 max-sm:w-full max-sm:h-1/3 p-10 gap-3">
+            <div className="highlights flex flex-col justify-center items-center sm:w-1/3 max-sm:w-full max-sm:h-1/3 sm:p-20 max-sm:p-10 gap-3">
                 <MdTravelExplore className="text-5xl" />
                 <div className="flex flex-col w-full">
                     <h3 className="font-[PoppinsLight] font-bold text-2xl">
@@ -36,7 +36,7 @@ const LifeHighlights = () => {
                     </p>
                 </div>
             </div>
-            <div className="highlights flex flex-col justify-center items-center sm:w-1/3 max-sm:w-full max-sm:h-1/3 p-10 gap-3">
+            <div className="highlights flex flex-col justify-center items-center sm:w-1/3 max-sm:w-full max-sm:h-1/3 sm:p-20 max-sm:p-10 gap-3">
                 <FaCross className="text-5xl" />
                 <div className="flex flex-col w-full">
                     <h3 className="font-[PoppinsLight] font-bold text-2xl">

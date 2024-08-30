@@ -82,9 +82,20 @@ nav ul li {
     font-bold;
 }
 
-nav ul li:hover hr {
-  @apply
-    w-full
-    transition-all
-    duration-500;
+@layer utilities {
+  #countdown-timer p {
+    font-family: Times New Roman, serif;
+  }
+
+  #bible-quote p {
+    font-family: Times New Roman, serif;
+  }
+
+  #entourage-container .entourage-name {
+    font-family: Times New Roman, serif;
+  }
+
+  #entourage-container .entourage-role {
+    font-family: 'PoppinsLight', sans-serif;
+  }
 }

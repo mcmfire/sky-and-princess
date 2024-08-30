@@ -13,8 +13,8 @@ export const animateAboutUsImage = (aboutUsImageContainer: HTMLDivElement) => {
         scrollTrigger: {
             trigger: aboutUsImageContainer,
             start: "top 75%",
-            end: "bottom 75%",
-            scrub: window.innerWidth > 1024,
+            end: "bottom bottom",
+            scrub: window.innerWidth > 1024 ? 1 : false,
         }
     });
 
@@ -22,16 +22,19 @@ export const animateAboutUsImage = (aboutUsImageContainer: HTMLDivElement) => {
 };
 
 export const animateAboutUsContent = (aboutUsContent: HTMLDivElement) => {
-    const fadingInAnimation = gsap.fromTo(aboutUsContent, {
+    const contents = aboutUsContent.querySelectorAll("*");
+
+    const fadingInAnimation = gsap.fromTo(contents, {
         opacity: 0,
     }, {
         opacity: 1,
         duration: 3,
+        stagger: 0.5,
         scrollTrigger: {
             trigger: aboutUsContent,
             start: "top 75%",
-            end: "bottom 75%",
-            scrub: window.innerWidth > 1024,
+            end: "bottom 90%",
+            scrub: window.innerWidth > 1024 ? 1 : false,
         }
     });
 
@@ -51,7 +54,7 @@ export const animateLifeHighlights = () => {
             trigger: highlights,
             start: "top 75%",
             end: "bottom 75%",
-            scrub: window.innerWidth > 1024,
+            scrub: window.innerWidth > 1024 ? 1 : false,
         }
     });
 

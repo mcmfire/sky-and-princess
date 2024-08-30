@@ -39,6 +39,10 @@ const Navbar = () => {
                     <a href={`#portfolio-section`}>PORTFOLIO</a>
                     <hr className="w-0" />
                 </li>
+                <li id={`program-link`}>
+                    <a href={`#program-section`}>PROGRAM</a>
+                    <hr className="w-0" />
+                </li>
             </ul>
         </nav>
     );
