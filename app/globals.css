@@ -12,13 +12,23 @@
   src: url('../public/fonts/AmsterdamSignature/regular.ttf');
 }
 
+@font-face {
+  font-family: 'AmedaRegular';
+  src: url('../public/fonts/Ameda/regular.otf');
+}
+
+:root {
+  --theme-color-fg: #DC2626;
+  --theme-color-bg: #0F172A;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   @apply
-    text-white
+    text-[--theme-color-bg]
     bg-white;
 }
 
@@ -31,16 +41,20 @@ main {
 section {
   @apply
     flex 
-    w-full min-h-screen h-screen
+    w-full min-h-screen
     overflow-hidden;
 }
 
-section:first-child h1 {
-  font-family: 'AmsterdamSignatureRegular';
+section:not(:first-child) {
+  @apply
+   pt-[6.25rem];
 }
 
-section:first-child p {
+section:first-child {
   font-family: 'PoppinsLight', sans-serif;
+
+  @apply
+    text-white;
 }
 
 nav {
@@ -52,7 +66,8 @@ nav {
     sticky flex
     items-center
     p-4
-    bg-gradient-to-tl from-slate-900 to-slate-800;
+    bg-[--theme-color-bg]
+    text-white;
 }
 
 nav ul {

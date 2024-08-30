@@ -2,8 +2,8 @@
 
 import { gsap } from "@/lib/gsap";
 
-export const animateSAPLogo = (sapLogo : HTMLImageElement) => {
-    const risingAnimation = gsap.to(sapLogo, {
+export const animateLogo = (heroLogo : HTMLImageElement) => {
+    const risingAnimation = gsap.to(heroLogo, {
         opacity: 1,
         translateY: "0%",
         duration: 1,

@@ -3,46 +3,41 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
-import { animateNavbarLinks, animateSAPLogo } from "./animation";
-import SapLogoImage from "@/public/images/sap-logo.webp";
+import { animateNavbarLinks, animateLogo } from "./animation";
+import LogoImage from "@/public/images/logo.webp";
 
 const Navbar = () => {
-    const navbarSapLogoRef = useRef<HTMLImageElement>(null);
+    const navbarLogoRef = useRef<HTMLImageElement>(null);
 
     useGSAP(() => {
-        const navbarSapLogo = navbarSapLogoRef.current;
+        const navbarLogo = navbarLogoRef.current;
 
         const animationTimeline = gsap.timeline();
 
-        if (!navbarSapLogo) return;
+        if (!navbarLogo) return;
 
-        animationTimeline.add(animateSAPLogo(navbarSapLogo));
-        animationTimeline.add(animateNavbarLinks());
+        const { navbarLinksfadingInAnimation, navbarLinkHRsWidthAnimation } = animateNavbarLinks();
+
+        animationTimeline.add(animateLogo(navbarLogo));
+        animationTimeline.add(navbarLinksfadingInAnimation);
+        animationTimeline.add(navbarLinkHRsWidthAnimation);
     }, {});
 
     return (
-        <nav>
+        <nav id="navbar">
             <a href="#">
                 <Image
-                    ref={navbarSapLogoRef}
-                    src={SapLogoImage}
-                    alt="SAP Logo"
+                    ref={navbarLogoRef}
+                    src={LogoImage}
+                    alt="Logo"
                     width={48}
                     height={48}
                 />
             </a>
             <ul>
-                <li id="portfolio-link">
-                    <a href="#section-portfolio">PORTFOLIO</a>
-                    <hr className="w-0"/>
-                </li>
-                <li id="program-link">
-                    <a href="#section-program">PROGRAM</a>
-                    <hr className="w-0"/>
-                </li>
-                <li id="rsvp-link">
-                    <a href="#section-rsvp">RSVP</a>
-                    <hr className="w-0"/>
+                <li id={`portfolio-link`}>
+                    <a href={`#portfolio-section`}>PORTFOLIO</a>
+                    <hr className="w-0" />
                 </li>
             </ul>
         </nav>

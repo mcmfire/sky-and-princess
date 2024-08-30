@@ -1,0 +1,30 @@
+{
+    "sections": [
+        {
+            "title": "Hero",
+            "content": {
+                "hero_title": "Sky & Princess"
+            }
+        },
+        {
+            "title": "Portfolio",
+            "content": {
+                "about_us_content": "Welcome to Sky & Princess’ Love Story! Shoren, affectionately known as Sky, and Princess, lovingly called Cess, are excited to share their journey with you. From their first meeting [X years ago], they’ve cherished every moment together.",
+                "life_highlights": [
+                    {
+                        "title": "Opportunity Seekers",
+                        "content": "Established a business in 2023 entitled Lux Apparel."
+                    },
+                    {
+                        "title": "Professional Travelers",
+                        "content": "Traveled to numerous locations country-wide."
+                    },
+                    {
+                        "title": "God Followers",
+                        "content": "Actively attending church and obeying God's will."
+                    }
+                ]
+            }
+        }
+    ]
+}

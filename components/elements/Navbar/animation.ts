@@ -2,8 +2,8 @@
 
 import { gsap } from "@/lib/gsap";
 
-export const animateSAPLogo = (sapLogo : HTMLImageElement) => {
-    const spiningAnimation = gsap.to(sapLogo, {
+export const animateLogo = (logo: HTMLImageElement) => {
+    const spiningAnimation = gsap.to(logo, {
         rotate: 360,
         duration: 1,
         ease: "power4.out",
@@ -14,6 +14,7 @@ export const animateSAPLogo = (sapLogo : HTMLImageElement) => {
 
 export const animateNavbarLinks = () => {
     const navbarLinks = document.querySelectorAll("nav ul li");
+    const navbarLinkHRs = Array.from(document.querySelectorAll("nav ul li hr"));
 
     const navbarLinksfadingInAnimation = gsap.fromTo(navbarLinks, {
         opacity: 0,
@@ -23,5 +24,23 @@ export const animateNavbarLinks = () => {
         stagger: 0.5,
     });
 
-    return navbarLinksfadingInAnimation;
+    const navbarLinkHRsWidthAnimation = navbarLinkHRs.map((navbarLinkHR, index) => {
+        const sections = ["#portfolio-section"];
+
+        return gsap.fromTo(navbarLinkHR, {
+            width: "0",
+        }, {
+            width: "100%",
+            duration: 1,
+            scrollTrigger: {
+                trigger: sections[index],
+                start: "top 50%",
+                end: "bottom 50%",
+                scrub: true,
+            }
+        });
+    });
+
+
+    return { navbarLinksfadingInAnimation, navbarLinkHRsWidthAnimation };
 };
