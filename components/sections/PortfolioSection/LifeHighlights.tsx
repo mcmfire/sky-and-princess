@@ -17,7 +17,7 @@ const LifeHighlights = () => {
     }, {});
 
     return (
-        <div className="flex max-sm:flex-col justify-evenly items-center w-full text-white bg-[--theme-color-bg] text-center">
+        <div className="flex max-sm:flex-col justify-evenly items-center w-full text-white bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light] text-center">
             <div className="highlights flex flex-col justify-center items-center sm:w-1/3 max-sm:w-full max-sm:h-1/3 sm:p-20 max-sm:p-10 gap-3">
                 <MdAddBusiness className="text-5xl" />
                 <div className="flex flex-col w-full">

@@ -32,7 +32,7 @@ const Venue = () => {
     return (
         <div id="venue-container" className="flex flex-col justify-center items-center w-full">
             <div className="relative flex justify-center items-center w-full h-screen">
-                <div ref={venueImageConatinerRef} id="venue-image-container" className="w-full h-1/2 bg-[--theme-color-bg]">
+                <div ref={venueImageConatinerRef} id="venue-image-container" className="w-full h-1/2 bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light]">
                     <Image src={VenueImage} alt="Venue" layout="fill" objectFit="cover" />
                 </div>
                 <div className="absolute text-white sm:text-5xl max-sm:text-3xl">
@@ -48,7 +48,7 @@ const Venue = () => {
                 </div>
                 <p className="text-xl font-[PoppinsLight]">OR</p>
                 <Link href={PROGRAM_SECTION_VENUE_GMAPS_QR_LINK} target="_blank" rel="noreferrer"
-                    className="w-max h-max p-4 font-[PoppinsLight] text-white text-nowrap bg-[--theme-color-fg] rounded-lg">
+                    className="w-max h-max p-4 font-[PoppinsLight] text-white text-nowrap bg-[--theme-color-fg] rounded-lg shadow-md shadow-black">
                     View on Google Maps
                 </Link>
                 <div className="flex max-sm:flex-col items-center px-5 gap-5">

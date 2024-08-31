@@ -20,6 +20,7 @@
 :root {
   --theme-color-fg: #DC2626;
   --theme-color-bg: #0F172A;
+  --theme-color-bg-light: #1E293B;
 }
 
 html {
@@ -66,7 +67,7 @@ nav {
     sticky flex
     items-center
     p-4
-    bg-[--theme-color-bg]
+    bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light]
     text-white;
 }
 
@@ -80,6 +81,11 @@ nav ul li {
   @apply
     flex flex-col
     font-bold;
+}
+
+button:hover, input[type="submit"]:hover, a:hover {
+  @apply
+    brightness-125;
 }
 
 @layer utilities {
