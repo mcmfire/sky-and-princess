@@ -1,4 +1,5 @@
 {
+    "default_sequence_code": ["1", "4", "3"],
     "sections": [
         {
             "title": "Hero",
@@ -120,6 +121,14 @@
                         }
                     ]
                 }
+            }
+        },
+        {
+            "title": "RSVP",
+            "content": {
+                "rsvp_wedding_date": "October 21, 2024",
+                "rsvp_wedding_time": "2pm",
+                "rsvp_deadline": "September 15, 2024"
             }
         }
     ]

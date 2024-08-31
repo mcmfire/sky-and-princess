@@ -82,3 +82,8 @@ export const PROGRAM_SECTION_ENTOURAGE = Content.sections.find(section => sectio
         }
     ]
 };
+
+export const RSVP_WEDDING_DATE = Content.sections.find((section) => section.title === "RSVP")?.content.rsvp_wedding_date || "January 1, 2001";
+export const RSVP_WEDDING_TIME = Content.sections.find((section) => section.title === "RSVP")?.content.rsvp_wedding_time || "12AM";
+export const RSVP_DEADLINE = Content.sections.find((section) => section.title === "RSVP")?.content.rsvp_deadline || "December 31, 2001";
+export const DEFAULT_SEQUENCE_CODE = Content.default_sequence_code || [];

@@ -61,7 +61,7 @@ nav {
   font-family: 'PoppinsLight', sans-serif;
   
   @apply
-    z-50
+    z-40
     top-0
     sticky flex
     items-center
@@ -97,5 +97,17 @@ nav ul li {
 
   #entourage-container .entourage-role {
     font-family: 'PoppinsLight', sans-serif;
+  }
+
+  #phone-number {
+    -moz-appearance: textfield;
+  }
+  #phone-number::-webkit-inner-spin-button {
+    display: none;
+  }
+  #phone-number::-webkit-outer-spin-button,
+  #phone-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }

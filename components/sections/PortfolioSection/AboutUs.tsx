@@ -19,6 +19,11 @@ const AboutUs = () => {
 
         animateAboutUsImage(aboutUsImageContainer);
         animateAboutUsContent(aboutUsContent);
+
+        return () => {
+            animateAboutUsImage(aboutUsImageContainer).kill();
+            animateAboutUsContent(aboutUsContent).kill();
+        }
     }, {});
 
     return (

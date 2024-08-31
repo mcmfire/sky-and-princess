@@ -21,6 +21,10 @@ const Navbar = () => {
         animationTimeline.add(animateLogo(navbarLogo));
         animationTimeline.add(navbarLinksfadingInAnimation);
         animationTimeline.add(navbarLinkHRsWidthAnimation);
+
+        return () => {
+            animationTimeline.kill();
+        };
     }, {});
 
     return (
@@ -41,6 +45,10 @@ const Navbar = () => {
                 </li>
                 <li id={`program-link`}>
                     <a href={`#program-section`}>PROGRAM</a>
+                    <hr className="w-0" />
+                </li>
+                <li id={`rsvp-link`}>
+                    <a href={`#rsvp-section`}>RSVP</a>
                     <hr className="w-0" />
                 </li>
             </ul>

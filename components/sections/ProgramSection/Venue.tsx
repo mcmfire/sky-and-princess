@@ -21,6 +21,12 @@ const Venue = () => {
         animateVenueImage(venueImageContainer);
         animateVenueQRCode();
         animateEntourageCard();
+
+        return () => {
+            animateVenueImage(venueImageContainer).kill();
+            animateVenueQRCode().kill();
+            animateEntourageCard().kill();
+        }
     }, {});
 
     return (

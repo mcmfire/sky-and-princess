@@ -25,7 +25,7 @@ export const animateNavbarLinks = () => {
     });
 
     const navbarLinkHRsWidthAnimation = navbarLinkHRs.map((navbarLinkHR, index) => {
-        const sections = ["#portfolio-section", "#program-section"];
+        const sections = ["#portfolio-section", "#program-section", "#rsvp-section"];
 
         return gsap.fromTo(navbarLinkHR, {
             width: "0",

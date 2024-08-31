@@ -28,6 +28,11 @@ const CountdownTimer = () => {
     useGSAP(() => {
         animateTimer();
         animateText();
+
+        return () => {
+            animateTimer().kill();
+            animateText().kill();
+        };
     }, {});
 
     return (

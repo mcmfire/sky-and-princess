@@ -21,6 +21,10 @@ const HeroSection = () => {
 
         animationTimeline.add(animateLogo(heroLogo));
         animationTimeline.add(animateHeroTitle(heroTitleContainer));
+
+        return () => {
+            animationTimeline.kill();
+        };
     }, {});
 
     return (

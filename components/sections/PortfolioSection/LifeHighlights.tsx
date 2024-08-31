@@ -10,6 +10,10 @@ import { animateLifeHighlights } from "./animation";
 const LifeHighlights = () => {
     useGSAP(() => {
         animateLifeHighlights();
+
+        return () => {
+            animateLifeHighlights().kill();
+        }
     }, {});
 
     return (
