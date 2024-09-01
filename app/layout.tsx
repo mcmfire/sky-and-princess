@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import { BRIDE_NAME, GROOM_NAME } from "@/utils/constants";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: `${GROOM_NAME} & ${BRIDE_NAME}`,
@@ -20,6 +21,7 @@ export default function RootLayout({
       </Head>
       <body>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
