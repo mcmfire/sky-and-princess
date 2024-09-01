@@ -18,7 +18,7 @@ const RSVPForm = ({ setShowRSVPForm, setRSVPAnswer }: RSVPFormProps) => {
                     <div className="relative flex w-full">
                         <input type="number" id="phone-number" name="phone_number" className="flex w-full py-2 pl-14 pr-2 rounded-lg border-2 border-gray-300 focus:outline-none appearance-none" 
                             onChange={handlePhoneNumberChange}/>
-                        <span className="absolute left-0 top-0 flex items-center px-2 w-max h-full text-gray-400 rounded-tl-lg rounded-bl-lg border-2 border-gray-300">+63</span>
+                        <span className="absolute left-0 top-0 flex items-center px-2 w-max h-full text-gray-400 rounded-tl-lg rounded-bl-lg border-2 border-gray-300 select-none">+63</span>
                     </div>
                 </div>
                 <div className="flex flex-col gap-3">

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { calculateTimeLeft } from './counter';
 import { animateText, animateTimer } from './animation';
+import { PROGRAM_SECTION_BIBLE_QUOTE_REFERENCE, PROGRAM_SECTION_BIBLE_QUOTE_VERSE, PROGRAM_SECTION_COUNTDOWN_SHORT_DATE, PROGRAM_SECTION_COUNTDOWN_TIME } from '@/utils/constants';
 
 const CountdownTimer = () => {
     const [days, setDays] = useState(0);
@@ -36,7 +37,7 @@ const CountdownTimer = () => {
     }, {});
 
     return (
-        <div className='flex flex-col w-full sm:max-xl:px-5 max-sm:px-10 gap-10'>
+        <div className='flex flex-col w-full sm:max-xl:px-5 max-sm:px-10 gap-10 max-sm:gap-5'>
             <div id="countdown-timer" className="flex justify-center items-center w-full sm:gap-10 opacity-0">
                 <div className="flex flex-col items-center">
                     <p className="timer-count sm:text-8xl max-sm:text-5xl">{days < 10 ? `0${days}` : days}</p>
@@ -67,9 +68,14 @@ const CountdownTimer = () => {
                     <p className='sm:text-2xl max-sm:text-lg'>Seconds</p>
                 </div>
             </div>
+            <div className='flex justify-center w-full gap-3 font-[PoppinsLight] sm:text-3xl max-sm:text-2xl'>
+                <p>{PROGRAM_SECTION_COUNTDOWN_SHORT_DATE}</p>
+                <p>—</p>
+                <p>{PROGRAM_SECTION_COUNTDOWN_TIME}</p>
+            </div>
             <div id="bible-quote" className="flex flex-col items-center sm:text-3xl text-center">
-                <p className="opacity-0">&quot;WHEN THE TIME IS RIGHT, I, THE LORD, WILL MAKE IT HAPPEN.&quot;</p>
-                <p className="font-bold opacity-0"><span className="font-medium">&#8212;</span> Isaiah 60:22</p>
+                <p className="opacity-0">&quot;{PROGRAM_SECTION_BIBLE_QUOTE_VERSE}&quot;</p>
+                <p className="font-bold opacity-0"><span className="font-medium">&#8212;</span> {PROGRAM_SECTION_BIBLE_QUOTE_REFERENCE}</p>
             </div>
         </div>
 

@@ -97,7 +97,8 @@ button:hover, input[type="submit"]:hover, a:hover {
     font-family: Times New Roman, serif;
   }
 
-  #entourage-container .entourage-name {
+  #entourage-container .entourage-name,
+  #sponsor-container .sponsor-name {
     font-family: Times New Roman, serif;
   }
 

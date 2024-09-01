@@ -8,7 +8,7 @@ import { useGSAP } from "@/lib/gsap";
 import { VENUE_NAME, PROGRAM_SECTION_VENUE_GMAPS_QR_LINK, PROGRAM_SECTION_VENUE_ADDRESS } from "@/utils/constants";
 import VenueImage from "@/public/images/venue.webp";
 import VenueQRCodeImage from "@/public/images/venue-qr-code.webp";
-import { animateEntourageCard, animateVenueImage, animateVenueQRCode } from "./animation";
+import { animateVenueImage, animateVenueQRCode } from "./animation";
 
 const Venue = () => {
     const venueImageConatinerRef = useRef<HTMLDivElement>(null);
@@ -20,12 +20,10 @@ const Venue = () => {
 
         animateVenueImage(venueImageContainer);
         animateVenueQRCode();
-        animateEntourageCard();
 
         return () => {
             animateVenueImage(venueImageContainer).kill();
             animateVenueQRCode().kill();
-            animateEntourageCard().kill();
         }
     }, {});
 
@@ -39,7 +37,7 @@ const Venue = () => {
                     <Image src={VenueImage} alt="Venue" layout="fill" objectFit="cover" />
                 </div>
                 <div className="absolute text-white sm:text-5xl max-sm:text-3xl">
-                    <p className="uppercase font-[AmedaRegular]">{VENUE_NAME}</p>
+                    <p className="uppercase font-[AmedaRegular] text-center">{VENUE_NAME}</p>
                 </div>
             </div>
             <div className="flex flex-col items-center w-full sm:px-10 gap-5">

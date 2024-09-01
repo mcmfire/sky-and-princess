@@ -44,15 +44,15 @@ export const animateVenueQRCode = () => {
     return rotatingAnimation;
 };
 
-export const animateEntourageCard = () => {
-    const fadingInAnimation = gsap.fromTo(".entourage-card", {
+export const animateCard = (cardsClass: string, cardsContainer: string) => {
+    const fadingInAnimation = gsap.fromTo(cardsClass, {
         opacity: 0,
     }, {
         opacity: 1,
         duration: window.innerWidth > 1024 ? 3 : 1,
         stagger: window.innerWidth > 1024 ? 1 : 0.5,
         scrollTrigger: {
-            trigger: "#entourage-container",
+            trigger: cardsContainer,
             start: "top 80%",
             end: "bottom 90%",
             scrub: window.innerWidth > 1024 ? 1 : false,

@@ -3,10 +3,7 @@ import Content from '@/data/content.json';
 export const GROOM_NAME = Content.groom.name || "Groom";
 export const BRIDE_NAME = Content.bride.name || "Bride";
 export const VENUE_NAME = Content.venue_name || "Venue Name";
-
-export const HERO_SECTION_DATE = Content.sections.find(section => section.title === 'Hero')?.content.hero_date || "01.01.2001";
-export const HERO_SECTION_TIME = Content.sections.find(section => section.title === 'Hero')?.content.hero_time || "12PM";
-export const HERO_SECTION_VENUE_SHORT_ADDRESS = Content.sections.find(section => section.title === 'Hero')?.content.hero_venue_short_address || "Venue Short Address";
+export const HASHTAG = Content.hashtag || "#Hashtag";
 
 export const PORTFOLIO_SECTION_ABOUT_US_CONTENT_ONE = Content.sections.find(section => section.title === 'Portfolio')?.content.about_us_content_one || "About Us Content 1";
 export const PORTFOLIO_SECTION_ABOUT_US_CONTENT_TWO = Content.sections.find(section => section.title === 'Portfolio')?.content.about_us_content_two || "About Us Content 2";
@@ -48,11 +45,19 @@ export const PORTFOLIO_SECTION_BRIDE_SKILLS = Content.sections.find(section => s
 }];
 
 export const PROGRAM_SECTION_COUNTDOWN_TARGET_DATE = Content.sections.find(section => section.title === 'Program')?.content.countdown_target_date || Date.now();
+export const PROGRAM_SECTION_COUNTDOWN_SHORT_DATE = Content.sections.find(section => section.title === 'Program')?.content.countdown_short_date || "January 1";
+export const PROGRAM_SECTION_COUNTDOWN_TIME = Content.sections.find(section => section.title === 'Program')?.content.countdown_time || "12:00 PM";
 export const PROGRAM_SECTION_BIBLE_QUOTE_VERSE = Content.sections.find(section => section.title === 'Program')?.content.bible_quote_verse || "Bible Verse";
 export const PROGRAM_SECTION_BIBLE_QUOTE_REFERENCE = Content.sections.find(section => section.title === 'Program')?.content.bible_quote_reference || "Bible Reference";
 
 export const PROGRAM_SECTION_VENUE_GMAPS_QR_LINK = Content.sections.find(section => section.title === 'Program')?.content.venue_gmaps_qr_link || "https://www.google.com/maps/@13.6239101,120.0924022,6.29z?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D";
 export const PROGRAM_SECTION_VENUE_ADDRESS = Content.sections.find(section => section.title === 'Program')?.content.venue_address || "Venue Address";
+export const PROGRAM_SECTION_SPONSORS = Content.sections.find(section => section.title === 'Program')?.content.sponsors || [
+    {
+        "name": "Sponsor 1",
+        "role": "Principal Sponsor"
+    }
+];
 export const PROGRAM_SECTION_ENTOURAGE = Content.sections.find(section => section.title === 'Program')?.content.entourage || {
     "tier_one": [
         {
@@ -77,29 +82,29 @@ export const PROGRAM_SECTION_ENTOURAGE = Content.sections.find(section => sectio
     "tier_three": [
         {
             "name": "Name 5",
-            "role": "CANDLE"
+            "role": "CANDLE BEARER"
         },
         {
             "name": "Name 6",
-            "role": "VEIL"
+            "role": "VEIL BEARER"
         },
         {
             "name": "Name 7",
-            "role": "CORD"
+            "role": "CORD BEARER"
         }
     ],
     "tier_four": [
         {
             "name": "Name 8",
-            "role": "BIBLE"
+            "role": "BIBLE BEARER"
         },
         {
             "name": "Name 9",
-            "role": "RING"
+            "role": "RING BEARER"
         },
         {
             "name": "Name 10",
-            "role": "COIN"
+            "role": "COIN BEARER"
         }
     ],
     "tier_five": [

@@ -6,15 +6,12 @@
     "bride": {
         "name": "Princess"
     },
-    "venue_name": "Paraiso de Avedad",
+    "venue_name": "St. Francis of Assisi Parish",
+    "hashtag": "#princessturnsqueenofsky",
     "sections": [
         {
             "title": "Hero",
-            "content": {
-                "hero_date": "10.21.2024",
-                "hero_time": "2pm",
-                "hero_venue_short_address": "San Pablo City, Laguna"
-            }
+            "content": {}
         },
         {
             "title": "Portfolio",
@@ -60,7 +57,7 @@
                     },
                     {
                         "label": "Driving",
-                        "progress": 90
+                        "progress": 70
                     },
                     {
                         "label": "Career",
@@ -68,7 +65,7 @@
                     },
                     {
                         "label": "Singing",
-                        "progress": 80
+                        "progress": 60
                     }
                 ]
             }
@@ -76,11 +73,51 @@
         {
             "title": "Program",
             "content": {
-                "countdown_target_date": "2024-10-21T00:00:00Z",
+                "countdown_target_date": "2024-10-21T21:00:00Z",
+                "countdown_short_date": "October 21",
+                "countdown_time": "2:00 PM",
                 "bible_quote_verse": "WHEN THE TIME IS RIGHT, I, THE LORD, WILL MAKE IT HAPPEN.",
                 "bible_quote_reference": "Isaiah 60:22",
-                "venue_gmaps_qr_link": "https://maps.app.goo.gl/6BAAEs49hQy5LsxeA",
-                "venue_address": "0459 Purok 3 Sitio Balanga Barangay San Antonio 1, San Pablo City, Laguna",
+                "venue_gmaps_qr_link": "https://maps.app.goo.gl/YMQ2nkHnTseVyUzb8",
+                "venue_address": "Farconville Subd., Brgy. San Francisco, San Pablo City, Laguna",
+                "sponsors": [
+                    {
+                        "name": "FR. EDGAR CONSIGNADO",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "DRA. DORY PAGLINAWAN",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "VIVIAN ABEJA",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "JOEY & LOLIT ESTRELLADO",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "JAY & MAVIC PALICPIC",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "NILO & CHERRY LANTO",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "JIMMY & FE MASAKAYAN",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "ARTHUR & AIDA GARCIA",
+                        "role": "PRINCIPAL SPONSOR"
+                    },
+                    {
+                        "name": "MARIETA & RONALD HERNANDEZ",
+                        "role": "PRINCIPAL SPONSOR"
+                    }
+                ],
                 "entourage": {
                     "tier_one": [
                         {
@@ -113,42 +150,43 @@
                     "tier_three": [
                         {
                             "name": "LORENZO GANABAN",
-                            "role": "CANDLE"
+                            "role": "CANDLE BEARER"
                         },
                         {
                             "name": "KYLE DE LEON",
-                            "role": "CANDLE"
+                            "role": "CANDLE BEARER"
                         },
                         {
                             "name": "CHRISTIAN LATOZA",
-                            "role": "VEIL"
+                            "role": "VEIL BEARER"
                         },
                         {
                             "name": "JEZ FELICIANO",
-                            "role": "VEIL"
+                            "role": "VEIL BEARER"
                         },
                         {
                             "name": "PATRICK VILLANUEVA",
-                            "role": "CORD"
+                            "role": "CORD BEARER"
                         },
                         {
                             "name": "MONICA PARANGAT",
-                            "role": "CORD"
+                            "role": "CORD BEARER"
                         }
                     ],
                     "tier_four": [
                         {
-                            "name": "CHARISSE TUBAÑA",
-                            "role": "BIBLE"
+                            "name": "SHINKY ICASIAM",
+                            "role": "COIN BEARER"
                         },
                         {
                             "name": "MC MASAKAYAN",
-                            "role": "RING"
+                            "role": "RING BEARER"
                         },
                         {
-                            "name": "SHINKY ICASIAM",
-                            "role": "COIN"
+                            "name": "CHARISSE TUBAÑA",
+                            "role": "BIBLE BEARER"
                         }
+                        
                     ],
                     "tier_five": [
                         {

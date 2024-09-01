@@ -1,5 +1,6 @@
 import SectionTitle from "@/components/elements/SectionTitle";
 import Venue from "./Venue";
+import Sponsors from "./Sponsors";
 import Entourage from "./Entourage";
 import CountdownTimer from "@/components/elements/CountdownTimer";
 
@@ -9,6 +10,7 @@ const ProgramSection = () => {
             <SectionTitle title="Program" />
             <CountdownTimer />
             <Venue />
+            <Sponsors />
             <Entourage />
         </section>
     );
