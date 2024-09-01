@@ -49,8 +49,8 @@ export const animateEntourageCard = () => {
         opacity: 0,
     }, {
         opacity: 1,
-        duration: 3,
-        stagger: 1,
+        duration: window.innerWidth > 1024 ? 3 : 1,
+        stagger: window.innerWidth > 1024 ? 1 : 0.5,
         scrollTrigger: {
             trigger: "#entourage-container",
             start: "top 80%",

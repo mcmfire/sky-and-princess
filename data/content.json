@@ -1,14 +1,19 @@
 {
     "default_sequence_code": ["1", "4", "3"],
+    "groom": {
+        "name": "Sky"
+    },
+    "bride": {
+        "name": "Princess"
+    },
+    "venue_name": "Paraiso de Avedad",
     "sections": [
         {
             "title": "Hero",
             "content": {
-                "hero_title": "Sky & Princess",
                 "hero_date": "10.21.2024",
                 "hero_time": "2pm",
-                "hero_venue_name": "PARAISO DE AVEDAD",
-                "hero_venue_short_address": "SAN PABLO CITY, LAGUNA"
+                "hero_venue_short_address": "San Pablo City, Laguna"
             }
         },
         {
@@ -29,6 +34,42 @@
                         "title": "God Followers",
                         "content": "Actively attending church and obeying God's will."
                     }
+                ],
+                "groom_skills": [
+                    {
+                        "label": "Cooking",
+                        "progress": 90
+                    },
+                    {
+                        "label": "Driving",
+                        "progress": 100
+                    },
+                    {
+                        "label": "Career",
+                        "progress": 100
+                    },
+                    {
+                        "label": "Singing",
+                        "progress": 10
+                    }
+                ],
+                "bride_skills": [
+                    {
+                        "label": "Cooking",
+                        "progress": 100
+                    },
+                    {
+                        "label": "Driving",
+                        "progress": 90
+                    },
+                    {
+                        "label": "Career",
+                        "progress": 100
+                    },
+                    {
+                        "label": "Singing",
+                        "progress": 80
+                    }
                 ]
             }
         },
@@ -38,7 +79,6 @@
                 "countdown_target_date": "2024-10-21T00:00:00Z",
                 "bible_quote_verse": "WHEN THE TIME IS RIGHT, I, THE LORD, WILL MAKE IT HAPPEN.",
                 "bible_quote_reference": "Isaiah 60:22",
-                "venue_name": "PARAISO DE AVEDAD",
                 "venue_gmaps_qr_link": "https://maps.app.goo.gl/6BAAEs49hQy5LsxeA",
                 "venue_address": "0459 Purok 3 Sitio Balanga Barangay San Antonio 1, San Pablo City, Laguna",
                 "entourage": {

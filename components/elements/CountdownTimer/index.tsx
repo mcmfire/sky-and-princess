@@ -36,7 +36,7 @@ const CountdownTimer = () => {
     }, {});
 
     return (
-        <div className='flex flex-col w-full max-sm:px-10 gap-10'>
+        <div className='flex flex-col w-full sm:max-xl:px-5 max-sm:px-10 gap-10'>
             <div id="countdown-timer" className="flex justify-center items-center w-full sm:gap-10 opacity-0">
                 <div className="flex flex-col items-center">
                     <p className="timer-count sm:text-8xl max-sm:text-5xl">{days < 10 ? `0${days}` : days}</p>

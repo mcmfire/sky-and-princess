@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { gsap, useGSAP } from "@/lib/gsap";
-import { HERO_SECTION_DATE, HERO_SECTION_TIME, HERO_SECTION_TITLE, HERO_SECTION_VENUE_NAME, HERO_SECTION_VENUE_SHORT_ADDRESS } from "@/utils/constants";
+import { HERO_SECTION_DATE, HERO_SECTION_TIME, GROOM_NAME, BRIDE_NAME, VENUE_NAME, HERO_SECTION_VENUE_SHORT_ADDRESS } from "@/utils/constants";
 import { animateHeroTitle, animateLogo } from "./animation";
 import HeroImage from "@/public/images/hero.webp";
 import heroLogoImage from "@/public/images/logo.webp";
@@ -35,7 +35,7 @@ const HeroSection = () => {
                     <div id="hero-title-container" className="flex flex-col items-center justify-center sm:gap-5 max-sm:gap-3 opacity-0">
                         <h1 className="sm:text-[9rem] max-sm:text-8xl -mt-5 font-[AmsterdamSignatureRegular]"
                             style={{lineHeight: 0.75}}>
-                            {HERO_SECTION_TITLE}
+                            {GROOM_NAME} & {BRIDE_NAME}
                         </h1>
                         <div className="flex flex-col w-full h-full mt-3 gap-3">
                             <hr />
@@ -48,8 +48,8 @@ const HeroSection = () => {
                             <p className="sm:hidden">•</p>
                             <p>{HERO_SECTION_TIME}</p>
                         </div>
-                        <div className="flex max-sm:flex-col max-sm:items-center sm:gap-3 sm:text-xl max-sm:text-lg">
-                            <p>{HERO_SECTION_VENUE_NAME}</p>
+                        <div className="uppercase flex max-sm:flex-col max-sm:items-center sm:gap-3 sm:text-xl max-sm:text-lg">
+                            <p>{VENUE_NAME}</p>
                             <p className="max-sm:hidden font-bold">•</p>
                             <p>{HERO_SECTION_VENUE_SHORT_ADDRESS}</p>
                         </div>

@@ -1,6 +1,7 @@
 import LifeHighlights from "./LifeHighlights";
 import AboutUs from "./AboutUs";
 import SectionTitle from "@/components/elements/SectionTitle";
+import Skills from "./Skills";
 
 const PortfolioSection = () => {
     return (
@@ -8,6 +9,7 @@ const PortfolioSection = () => {
             <SectionTitle title="Portfolio"/>
             <AboutUs />
             <LifeHighlights />
+            <Skills />
         </section>
     );
 };

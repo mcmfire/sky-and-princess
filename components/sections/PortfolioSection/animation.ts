@@ -9,7 +9,7 @@ export const animateAboutUsImage = (aboutUsImageContainer: HTMLDivElement) => {
     }, {
         opacity: 1,
         translateX: "0%",
-        duration: 3,
+        duration: window.innerWidth > 1024 ? 3 : 1,
         scrollTrigger: {
             trigger: aboutUsImageContainer,
             start: "top 75%",
@@ -28,7 +28,7 @@ export const animateAboutUsContent = (aboutUsContent: HTMLDivElement) => {
         opacity: 0,
     }, {
         opacity: 1,
-        duration: 3,
+        duration: window.innerWidth > 1024 ? 3 : 1,
         stagger: 0.5,
         scrollTrigger: {
             trigger: aboutUsContent,
@@ -46,9 +46,11 @@ export const animateLifeHighlights = () => {
 
     const fadingInAnimation = gsap.fromTo(highlights, {
         opacity: 0,
+        scale: 1.5,
     }, {
         opacity: 1,
-        duration: 3,
+        scale: 1,
+        duration: window.innerWidth > 1024 ? 3 : 1,
         stagger: 0.5,
         scrollTrigger: {
             trigger: highlights,

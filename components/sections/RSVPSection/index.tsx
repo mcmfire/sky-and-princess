@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { RSVP_WEDDING_DATE, RSVP_WEDDING_TIME } from "@/utils/constants";
+import { IoMdInformationCircleOutline } from "react-icons/io";
+import { RSVP_DEADLINE, RSVP_WEDDING_DATE, RSVP_WEDDING_TIME } from "@/utils/constants";
 import SectionTitle from "@/components/elements/SectionTitle";
 import KeySequenceDetector from "@/components/elements/KeySequenceDetector";
 import RSVPForm from "./RSVPForm";
@@ -33,7 +34,7 @@ const RSVPSection = () => {
 
             return;
         }
-        
+
         setUserAttending(user.isAttending);
     }
 
@@ -73,9 +74,9 @@ const RSVPSection = () => {
 
     return (
         <section id="rsvp-section" className="flex-col items-center gap-10">
-            <KeySequenceDetector/>
+            <KeySequenceDetector />
             <SectionTitle title="RSVP" />
-            <div className="flex flex-col sm:w-1/4 max-sm:w-full max-sm:px-5 gap-5 -my-10">
+            <div className="flex flex-col sm:w-1/4 sm:max-xl:w-1/2 max-sm:w-full max-sm:px-5 gap-5 -my-10">
                 {userAttending && (
                     <div className="flex flex-col items-center">
                         <p className="w-full text-3xl text-center">&#129392;</p>
@@ -108,7 +109,7 @@ const RSVPSection = () => {
                                 YES, take me to RSVP
                             </button>
                             <button className="py-3 bg-[--theme-color-fg] text-white rounded-lg shadow-md shadow-black"
-                                onClick={() => {setRsvpAnswer("No");}}>
+                                onClick={() => setRsvpAnswer("No")}>
                                 NO
                             </button>
                         </div>
@@ -125,6 +126,11 @@ const RSVPSection = () => {
                         )}
                     </div>
                 )}
+                <div className="flex justify-center items-center w-full gap-1">
+                    <IoMdInformationCircleOutline className="text-xl text-blue-500" />
+                    <p className="italic">RSVP Deadline: {RSVP_DEADLINE}</p>
+                </div>
+
             </div>
         </section>
     );
