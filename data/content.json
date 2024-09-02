@@ -6,7 +6,8 @@
     "bride": {
         "name": "Princess"
     },
-    "venue_name": "St. Francis of Assisi Parish",
+    "church_name": "St. Francis of Assisi Parish",
+    "reception_name": "Paraiso de Avedad",
     "hashtag": "#princessturnsqueenofsky",
     "sections": [
         {
@@ -78,8 +79,10 @@
                 "countdown_time": "2:00 PM",
                 "bible_quote_verse": "WHEN THE TIME IS RIGHT, I, THE LORD, WILL MAKE IT HAPPEN.",
                 "bible_quote_reference": "Isaiah 60:22",
-                "venue_gmaps_qr_link": "https://maps.app.goo.gl/YMQ2nkHnTseVyUzb8",
-                "venue_address": "Farconville Subd., Brgy. San Francisco, San Pablo City, Laguna",
+                "church_gmaps_qr_link": "https://maps.app.goo.gl/YMQ2nkHnTseVyUzb8",
+                "church_address": "Farconville Subd., Brgy. San Francisco, San Pablo City, Laguna",
+                "reception_gmaps_qr_link": "https://maps.app.goo.gl/jFyKuwTTw9v7KvEx7",
+                "reception_address": "0459 Purok 3 Sitio Balanga Barangay San Antonio 1, San Pablo City, Laguna",
                 "sponsors": [
                     {
                         "name": "FR. EDGAR CONSIGNADO",
