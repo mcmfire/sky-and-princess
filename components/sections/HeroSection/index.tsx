@@ -33,13 +33,10 @@ const HeroSection = () => {
                 <div className="flex flex-col justify-center items-center opacity-90">
                     <Image ref={heroLogoRef} src={heroLogoImage} alt="HeroLogo" className="w-32 h-auto translate-y-full"/>
                     <div id="hero-title-container" className="flex flex-col items-center justify-center sm:gap-5 max-sm:gap-3 opacity-0">
-                        <h1 className="sm:text-[9rem] max-sm:text-8xl -mt-5 font-[AmsterdamSignatureRegular]"
-                            style={{lineHeight: 0.75}}>
-                            {GROOM_NAME} & {BRIDE_NAME}
-                        </h1>
+                        <h1>{GROOM_NAME} & {BRIDE_NAME}</h1>
                         <div className="flex flex-col w-full h-full mt-3 gap-3">
                             <hr />
-                            <p className="self-center sm:text-2xl max-sm:text-xl">WE&apos;RE GETTING MARRIED</p>
+                            <h2 className="self-center">WE&apos;RE GETTING MARRIED</h2>
                             <hr />
                         </div>
                         <p className="text-lg">{HASHTAG}</p>

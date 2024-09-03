@@ -37,10 +37,10 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className="flex flex-col md:justify-center w-full p-5 gap-5">
-                    <h4 className="font-[AmedaRegular] text-3xl">
+                    <label className="font-[PoppinsLight] font-bold text-3xl">
                         {toPossessiveForm(GROOM_NAME)} Skills
-                    </h4>
-                    <div className="flex flex-col w-full gap-5">
+                    </label>
+                    <div id="" className="flex flex-col w-full gap-5">
                         {PORTFOLIO_SECTION_GROOM_SKILLS.map((skill, index) => (
                             <ProgressBar key={`${skill.label}-${index}`} label={skill.label} group={GROOM_NAME.toLowerCase()} progress={skill.progress} />
                         ))}
@@ -57,9 +57,9 @@ const Skills = () => {
                     </div>
                 </div>
                 <div className="flex flex-col md:justify-center w-full p-5 gap-5">
-                    <h4 className="font-[AmedaRegular] text-3xl">
+                    <h3 className="font-[PoppinsLight] font-bold text-3xl">
                         {toPossessiveForm(BRIDE_NAME)} Skills
-                    </h4>
+                    </h3>
                     <div className="flex flex-col w-full gap-5">
                         {PORTFOLIO_SECTION_BRIDE_SKILLS.map((skill, index) => (
                             <ProgressBar key={`${skill.label}-${index}`} label={skill.label} group={BRIDE_NAME.toLowerCase()} progress={skill.progress} />

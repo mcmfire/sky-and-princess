@@ -6,7 +6,7 @@ import Skills from "./Skills";
 const PortfolioSection = () => {
     return (
         <section id="portfolio-section" className="flex-col items-center gap-10">
-            <SectionTitle title="Portfolio"/>
+            <SectionTitle title="Portfolio" section="portfolio-section"/>
             <AboutUs />
             <LifeHighlights />
             <Skills />

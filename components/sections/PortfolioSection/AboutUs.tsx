@@ -39,7 +39,7 @@ const AboutUs = () => {
     }, {});
 
     return (
-        <div className="flex flex-col items-center px-5">
+        <div className="flex flex-col items-center px-10">
             <div className="flex sm:max-xl:flex-col sm:max-xl:items-center max-sm:flex-col gap-10">
                 <div ref={aboutUsImageContainerRef} className="shrink-0 sm:w-1/3 sm:max-xl:w-1/2 max-sm:w-full sm:h-1/3 sm:max-xl:h-1/2 max-sm:h-full p-5 bg-white shadow-sm shadow-black">
                     <div className="relative aspect-square">
@@ -49,11 +49,11 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div ref={aboutUsContentRef} className="flex flex-col sm:max-xl:items-center max-sm:items-center w-full h-full gap-5">
-                    <h3 className="font-[AmedaRegular] text-5xl">ABOUT US</h3>
-                    <p className="font-[PoppinsLight] sm:text-3xl max-sm:text-xl sm:max-xl:text-center max-sm:text-center">
+                    <h3>ABOUT US</h3>
+                    <p className="font-[PoppinsLight] text-xl sm:max-xl:text-center max-sm:text-center">
                         {PORTFOLIO_SECTION_ABOUT_US_CONTENT_ONE}
                     </p>
-                    <p className="font-[PoppinsLight] sm:text-3xl max-sm:text-xl sm:max-xl:text-center max-sm:text-center">
+                    <p className="font-[PoppinsLight] text-xl sm:max-xl:text-center max-sm:text-center">
                         {PORTFOLIO_SECTION_ABOUT_US_CONTENT_TWO}
                     </p>
                 </div>

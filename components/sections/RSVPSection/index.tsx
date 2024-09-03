@@ -75,7 +75,7 @@ const RSVPSection = () => {
     return (
         <section id="rsvp-section" className="flex-col items-center gap-10">
             <KeySequenceDetector />
-            <SectionTitle title="RSVP" />
+            <SectionTitle title="RSVP" section="rsvp-section"/>
             <div className="flex flex-col sm:w-1/4 sm:max-xl:w-1/2 max-sm:w-full max-sm:px-5 gap-5 -my-10">
                 {userAttending && (
                     <div className="flex flex-col items-center">
@@ -128,11 +128,10 @@ const RSVPSection = () => {
                 )}
                 <div className="flex justify-center items-center w-full gap-1">
                     <IoMdInformationCircleOutline className="text-xl text-blue-500" />
-                    <p className="italic">RSVP Deadline: {RSVP_DEADLINE}</p>
+                    <p className="italic">RSVP Deadline: <time dateTime="2024-09-15T00:00+08:00">{RSVP_DEADLINE}</time></p>
                 </div>
-
             </div>
-        </section>
+        </section >
     );
 };
 

@@ -7,7 +7,7 @@ import CountdownTimer from "@/components/elements/CountdownTimer";
 const ProgramSection = () => {
     return (
         <section id="program-section" className="flex-col items-center">
-            <SectionTitle title="Program" />
+            <SectionTitle title="Program" section="program-section"/>
             <CountdownTimer />
             <Venue />
             <Sponsors />

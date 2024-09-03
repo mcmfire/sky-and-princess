@@ -23,11 +23,11 @@ const LifeHighlights = () => {
                     {index === 0 && (<MdAddBusiness className="text-5xl" />)}
                     {index === 1 && (<MdTravelExplore className="text-5xl" />)}
                     {index === 2 && (<FaCross className="text-5xl" />)}
-                    <div className="flex flex-col w-full">
-                        <h5 className="font-[PoppinsLight] font-bold text-2xl">
+                    <div className="flex flex-col w-full gap-3">
+                        <label htmlFor={`highlight-${index + 1}`} className="font-[PoppinsLight] font-bold text-2xl">
                             {highlight.title || `Highlight ${index + 1}`}
-                        </h5>
-                        <p className="opacity-80">
+                        </label>
+                        <p id={`highlight-${index + 1}`} className="opacity-80">
                             {highlight.content || `Highlight Content ${index + 1}`}
                         </p>
                     </div>

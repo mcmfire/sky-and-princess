@@ -88,6 +88,26 @@ button:hover, input[type="submit"]:hover, a:hover {
     brightness-125;
 }
 
+h1 {
+  font-family: 'AmsterdamSignatureRegular', cursive, sans-serif;
+  line-height: 0.75;
+
+  @apply
+    sm:text-[9rem] max-sm:text-8xl -mt-5; 
+}
+
+h2 {
+  @apply
+    sm:text-2xl max-sm:text-xl;
+}
+
+h3 {
+  font-family: 'AmedaRegular', serif;
+
+  @apply
+    text-4xl;
+}
+
 @layer utilities {
   #countdown-timer p {
     font-family: Times New Roman, serif;

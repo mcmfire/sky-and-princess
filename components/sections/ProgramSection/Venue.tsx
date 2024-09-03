@@ -39,7 +39,7 @@ const Venue = () => {
 
     useGSAP(() => {
         const churchImageContainer = churchImageConatinerRef.current;
-        const churchContainerTitle = document.querySelector("#church-container div p") as HTMLParagraphElement;
+        const churchContainerTitle = document.querySelector("#church-container div label") as HTMLParagraphElement;
         const churchQRCodeContainer = document.querySelector("#church-qr-code-container") as HTMLDivElement;
 
         if (!churchImageContainer || !churchContainerTitle || !churchQRCodeContainer) return;
@@ -73,10 +73,8 @@ const Venue = () => {
 
     return (
         <div className="flex flex-col justify-center items-center w-full h-full py-10 gap-10">
-            <div id="church-container" className="flex flex-col justify-center items-center w-full h-full">
-                <h3 className="font-[AmedaRegular] sm:text-5xl max-sm:text-2xl">
-                    Venue (Church)
-                </h3>
+            <div id="church-container" className="flex flex-col justify-center items-center w-full h-full gap-5">
+                <h3>Ceremony</h3>
                 <div className="relative flex flex-col justify-center items-center w-full h-max">
                     <div ref={churchImageConatinerRef} id="church-image-container" className="w-full h-full bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light] opacity-0">
                         <div className="relative aspect-video">
@@ -86,13 +84,13 @@ const Venue = () => {
                                 style={{ objectFit: "cover", objectPosition: "top" }} />
                         </div>
                     </div>
-                    <div className="absolute self-center text-white sm:text-5xl max-sm:text-3xl">
-                        <p className="uppercase font-[AmedaRegular] text-center">{CHURCH_NAME}</p>
+                    <div className="absolute self-center text-center">
+                        <label htmlFor="church-image-container" className="uppercase font-[AmedaRegular] sm:text-5xl max-sm:text-3xl text-center text-white">{CHURCH_NAME}</label>
                     </div>
                 </div>
                 <div className="flex flex-col items-center w-full sm:px-10 gap-5">
-                    <div className="flex flex-col items-center">
-                        <p className="text-2xl font-[PoppinsLight] font-bold">SCAN ME</p>
+                    <div className="flex flex-col items-center gap-3">
+                        <label htmlFor="church-qr-code-container" className="text-xl font-[PoppinsLight] font-bold">SCAN ME</label>
                         <div id="church-qr-code-container" className="flex w-max h-max shadow-sm shadow-black opacity-0">
                             <Image src={churchQRUrl ? churchQRUrl : ChurchQRCodeImage}
                                 alt={`ChurchQRCode`} placeholder="blur"
@@ -106,16 +104,14 @@ const Venue = () => {
                     </Link>
                     <div className="flex sm:max-xl:flex-col max-sm:flex-col items-center px-5 gap-5">
                         <FaLocationDot className="text-5xl text-[--theme-color-fg]" />
-                        <p className="font-[PoppinsLight] font-bold sm:text-3xl max-sm:text-xl text-center">
+                        <address className="font-[PoppinsLight] font-bold sm:text-2xl max-sm:text-lg text-center">
                             {PROGRAM_SECTION_CHURCH_ADDRESS}
-                        </p>
+                        </address>
                     </div>
                 </div>
             </div>
-            <div id="reception-container" className="flex flex-col justify-center items-center w-full h-full">
-                <h3 className="font-[AmedaRegular] sm:text-5xl max-sm:text-2xl">
-                    Venue (Reception)
-                </h3>
+            <div id="reception-container" className="flex flex-col justify-center items-center w-full h-full gap-5">
+                <h3>Reception</h3>
                 <div className="relative flex flex-col justify-center items-center w-full h-max">
                     <div ref={receptionImageContainerRef} id="reception-image-container" className="w-full h-full bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light] opacity-0">
                         <div className="relative aspect-video">
@@ -125,13 +121,13 @@ const Venue = () => {
                                 style={{ objectFit: "cover", objectPosition: "top" }} />
                         </div>
                     </div>
-                    <div className="absolute self-center text-white sm:text-5xl max-sm:text-3xl">
-                        <p className="uppercase font-[AmedaRegular] text-center">{RECEPTION_NAME}</p>
+                    <div className="absolute self-center text-center">
+                        <label htmlFor="reception-image-container" className="uppercase font-[AmedaRegular] sm:text-5xl max-sm:text-3xl text-center text-white">{RECEPTION_NAME}</label>
                     </div>
                 </div>
                 <div className="flex flex-col items-center w-full sm:px-10 gap-5">
-                    <div className="flex flex-col items-center">
-                        <p className="text-2xl font-[PoppinsLight] font-bold">SCAN ME</p>
+                    <div className="flex flex-col items-center gap-3">
+                        <label htmlFor="reception-qr-code-container" className="text-xl font-[PoppinsLight] font-bold">SCAN ME</label>
                         <div id="reception-qr-code-container" className="flex w-max h-max shadow-sm shadow-black opacity-0">
                             <Image src={receptionQRUrl ? receptionQRUrl : ReceptionQRCodeImage} placeholder="blur"
                                 blurDataURL={ReceptionQRCodeImage.blurDataURL}
@@ -145,9 +141,9 @@ const Venue = () => {
                     </Link>
                     <div className="flex sm:max-xl:flex-col max-sm:flex-col items-center px-5 gap-5">
                         <FaLocationDot className="text-5xl text-[--theme-color-fg]" />
-                        <p className="font-[PoppinsLight] font-bold sm:text-3xl max-sm:text-xl text-center">
+                        <address className="font-[PoppinsLight] font-bold sm:text-2xl max-sm:text-lg text-center">
                             {PROGRAM_SECTION_RECEPTION_ADDRESS}
-                        </p>
+                        </address>
                     </div>
                 </div>
             </div>

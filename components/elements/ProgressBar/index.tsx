@@ -36,8 +36,8 @@ const ProgressBar = ({ label, group, progress = 0, smWidth = "full", lgWidth = "
 
     return (
         <div className={`flex justify-between items-center max-sm:w-${smWidth} sm:w-${lgWidth} h-5 gap-5`}>
-            <label htmlFor={label} className="truncate sm:w-1/4 max-sm:w-[30%] font-[PoppinsLight] text-lg">{label}</label>
-            <div className="progress-bar-container relative sm:w-3/4 max-sm:w-[70%] h-full opacity-0" style={{ clipPath: polygon }}>
+            <label htmlFor={`${group}-${label}`} className="truncate sm:w-1/4 max-sm:w-[30%] font-[PoppinsLight] text-lg">{label}</label>
+            <div id={`${group}-${label}`} className="progress-bar-container relative sm:w-3/4 max-sm:w-[70%] h-full opacity-0" style={{ clipPath: polygon }}>
                 <div id={label} className={`progress z-10 absolute flex w-[${progress}%] h-full bg-[--theme-color-fg]`}>
 
                 </div>
