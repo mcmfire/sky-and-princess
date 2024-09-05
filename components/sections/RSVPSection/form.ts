@@ -1,4 +1,5 @@
 import { Attendee } from "@/types/rsvp";
+import { DISCORD_WEBHOOK } from "@/utils/constants";
 import { exportToExcel } from "@/utils/export";
 
 export const handleSubmitRSVP = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -27,6 +28,16 @@ export const handleSubmitRSVP = async (event: React.FormEvent<HTMLFormElement>) 
         const data = await response.json();
 
         if (data.isAttending) {
+            const discordResponse = await fetch(`https://discord.com/api/webhooks/${DISCORD_WEBHOOK}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    content: `**${data.name}** is attending!\nPhone Number: ${data.phone_number ? data.phone_number : "*Not Provided*"}`,
+                }),
+            });
+
             localStorage.setItem("username", data.name);
             alert(`Thank you, ${data.name.toString()}. See you there!`);
             window.location.reload();
@@ -75,14 +86,14 @@ export const handleExcelDownload = async () => {
                 "Content-Type": "application/json",
             },
         });
-    
+
         if (!response.ok) {
             alert("Uh oh! Something went wrong. Please contact the admin.");
             return;
         }
-    
+
         const attendees: Attendee[] = await response.json();
-    
+
         exportToExcel(attendees);
     }
     catch (error) {

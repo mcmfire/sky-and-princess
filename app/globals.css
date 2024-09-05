@@ -18,9 +18,10 @@
 }
 
 :root {
-  --theme-color-fg: #DC2626;
-  --theme-color-bg: #0F172A;
-  --theme-color-bg-light: #1E293B;
+  --theme-color-fg: #0F172A;
+  --theme-color-fg-light: #1E293B;
+  --theme-color-bg: #B91C1C;
+  --theme-color-bg-light: #DC2626;
 }
 
 html {
@@ -29,7 +30,7 @@ html {
 
 body {
   @apply
-    text-[--theme-color-bg]
+    text-[--theme-color-fg]
     bg-white;
 }
 
@@ -88,6 +89,26 @@ button:hover, input[type="submit"]:hover, a:hover {
     brightness-125;
 }
 
+h1 {
+  font-family: 'AmsterdamSignatureRegular', cursive, sans-serif;
+  line-height: 0.75;
+
+  @apply
+    sm:text-[9rem] max-sm:text-8xl -mt-5; 
+}
+
+h2 {
+  @apply
+    sm:text-2xl max-sm:text-xl;
+}
+
+h3 {
+  font-family: 'AmedaRegular', serif;
+
+  @apply
+    text-4xl;
+}
+
 @layer utilities {
   #countdown-timer p {
     font-family: Times New Roman, serif;
@@ -97,7 +118,8 @@ button:hover, input[type="submit"]:hover, a:hover {
     font-family: Times New Roman, serif;
   }
 
-  #entourage-container .entourage-name {
+  #entourage-container .entourage-name,
+  #sponsor-container .sponsor-name {
     font-family: Times New Roman, serif;
   }
 

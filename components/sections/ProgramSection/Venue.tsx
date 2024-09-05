@@ -1,64 +1,133 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
-import { useGSAP } from "@/lib/gsap";
-import { VENUE_NAME, PROGRAM_SECTION_VENUE_GMAPS_QR_LINK, PROGRAM_SECTION_VENUE_ADDRESS } from "@/utils/constants";
-import VenueImage from "@/public/images/venue.webp";
-import VenueQRCodeImage from "@/public/images/venue-qr-code.webp";
-import { animateEntourageCard, animateVenueImage, animateVenueQRCode } from "./animation";
+import { gsap, useGSAP } from "@/lib/gsap";
+import {
+    CHURCH_NAME,
+    PROGRAM_SECTION_CHURCH_GMAPS_LINK,
+    PROGRAM_SECTION_CHURCH_ADDRESS,
+    PROGRAM_SECTION_RECEPTION_GMAPS_LINK,
+    PROGRAM_SECTION_RECEPTION_ADDRESS,
+    RECEPTION_NAME
+} from "@/utils/constants";
+import ChurchImage from "@/public/images/church.webp";
+import ReceptionImage from "@/public/images/reception.webp";
+import { animateImage } from "./animation";
+import { downloadFirebaseImage } from "@/utils/import";
 
 const Venue = () => {
-    const venueImageConatinerRef = useRef<HTMLDivElement>(null);
+    const [churchUrl, setChurchUrl] = useState("");
+    const [receptionUrl, setReceptionUrl] = useState("");
+    const churchImageConatinerRef = useRef<HTMLDivElement>(null);
+    const receptionImageContainerRef = useRef<HTMLDivElement>(null);
+
+    const fetchImageURL = async () => {
+        const churchImageURL = await downloadFirebaseImage("assets/church.webp");
+        const receptionImageURL = await downloadFirebaseImage("assets/reception.webp");
+
+        setChurchUrl(churchImageURL);
+        setReceptionUrl(receptionImageURL);
+    };
+
+    useEffect(() => {
+        fetchImageURL();
+    }, []);
 
     useGSAP(() => {
-        const venueImageContainer = venueImageConatinerRef.current;
+        const churchImageContainer = churchImageConatinerRef.current;
+        const churchContainerTitle = document.querySelector("#church-container div label:not(.scan-me)") as HTMLLabelElement;
 
-        if (!venueImageContainer) return;
+        if (!churchImageContainer || !churchContainerTitle) return;
 
-        animateVenueImage(venueImageContainer);
-        animateVenueQRCode();
-        animateEntourageCard();
+        const animationTimeline = gsap.timeline();
+
+        const { fadingInAnimation: churchFadingInAnimation, clippingAnimation: churchClippingAnimation } =
+            animateImage(churchImageContainer, churchContainerTitle);
+
+        animationTimeline.add(churchFadingInAnimation);
+        animationTimeline.add(churchClippingAnimation);
+
+        const receptionImageContainer = receptionImageContainerRef.current;
+        const receptionContainerTitle = document.querySelector("#reception-container div label:not(.scan-me)") as HTMLLabelElement;
+
+        if (!receptionImageContainer || !receptionContainerTitle) return;
+
+        const { fadingInAnimation: receptionFadingInAnimation, clippingAnimation: receptionClippingAnimation } =
+            animateImage(receptionImageContainer, receptionContainerTitle, "left");
+
+        animationTimeline.add(receptionFadingInAnimation);
+        animationTimeline.add(receptionClippingAnimation);
 
         return () => {
-            animateVenueImage(venueImageContainer).kill();
-            animateVenueQRCode().kill();
-            animateEntourageCard().kill();
+            animationTimeline.kill();
         }
     }, {});
 
     return (
-        <div id="venue-container" className="flex flex-col justify-center items-center w-full py-10">
-            <h3 className="font-[AmedaRegular] text-5xl">
-                Venue
-            </h3>
-            <div className="relative flex justify-center items-center w-full h-screen sm:-my-32 sm:max-lg:-my-80 sm:max-xl:-my-96 max-sm:-my-64">
-                <div ref={venueImageConatinerRef} id="venue-image-container" className="w-full h-1/2 bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light]">
-                    <Image src={VenueImage} alt="Venue" layout="fill" objectFit="cover" />
-                </div>
-                <div className="absolute text-white sm:text-5xl max-sm:text-3xl">
-                    <p className="uppercase font-[AmedaRegular]">{VENUE_NAME}</p>
-                </div>
-            </div>
-            <div className="flex flex-col items-center w-full sm:px-10 gap-5">
-                <div className="flex flex-col items-center">
-                    <p className="text-2xl font-[PoppinsLight] font-bold">SCAN ME</p>
-                    <div id="venue-qr-code-container" className="flex w-max h-max shadow-sm shadow-black opacity-0">
-                        <Image src={VenueQRCodeImage} alt="VenueQRCode" className="w-56 h-56" />
+        <div className="flex flex-col justify-center items-center w-full h-full py-10 gap-10">
+            <div id="church-container" className="flex flex-col justify-center items-center w-full h-full gap-5">
+                <h3>Ceremony</h3>
+                <div className="relative flex flex-col justify-center items-center w-full h-max">
+                    <div ref={churchImageConatinerRef} id="church-image-container" className="w-full h-full bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light] opacity-0">
+                        <div className="relative aspect-video">
+                            <Image src={churchUrl ? churchUrl : ChurchImage}
+                                alt={`Church`} fill sizes="100%" placeholder="blur"
+                                blurDataURL={ChurchImage.blurDataURL}
+                                style={{ objectFit: "cover", objectPosition: "top" }} />
+                        </div>
+                    </div>
+                    <div className="absolute self-center text-center">
+                        <label htmlFor="church-image-container" className="uppercase font-[AmedaRegular] sm:text-5xl max-sm:text-3xl text-center text-white">{CHURCH_NAME}</label>
                     </div>
                 </div>
-                <p className="text-xl font-[PoppinsLight]">OR</p>
-                <Link href={PROGRAM_SECTION_VENUE_GMAPS_QR_LINK} target="_blank" rel="noreferrer"
-                    className="w-max h-max p-4 font-[PoppinsLight] text-white text-nowrap bg-[--theme-color-fg] rounded-lg shadow-md shadow-black">
-                    View on Google Maps
-                </Link>
-                <div className="flex sm:max-xl:flex-col max-sm:flex-col items-center px-5 gap-5">
-                    <FaLocationDot className="text-5xl text-[--theme-color-fg]" />
-                    <p className="font-[PoppinsLight] font-bold sm:text-3xl max-sm:text-xl text-center">
-                        {PROGRAM_SECTION_VENUE_ADDRESS}
-                    </p>
+                <div className="flex flex-col items-center w-full sm:px-10 gap-5">
+                    <div className="flex flex-col items-center w-full gap-5 text-center">
+                        <p className="font-[PoppinsLight] sm:text-2xl max-sm:text-lg">The <span className="italic font-bold">ceremony</span> will be held at</p>
+                        <div className="flex sm:max-xl:flex-col max-sm:flex-col items-center px-5 gap-5">
+                            <FaLocationDot className="text-5xl text-[--theme-color-bg-light]" />
+                            <address className="font-[PoppinsLight] font-bold sm:text-2xl max-sm:text-lg">
+                                {PROGRAM_SECTION_CHURCH_ADDRESS}
+                            </address>
+                        </div>
+                        <Link href={PROGRAM_SECTION_CHURCH_GMAPS_LINK} target="_blank" rel="noreferrer"
+                            className="w-max h-max p-4 font-[PoppinsLight] text-white text-nowrap bg-[--theme-color-bg-light] rounded-lg shadow-md shadow-black">
+                            View on Google Maps
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            <div id="reception-container" className="flex flex-col justify-center items-center w-full h-full gap-5">
+                <h3>Reception</h3>
+                <div className="relative flex flex-col justify-center items-center w-full h-max">
+                    <div ref={receptionImageContainerRef} id="reception-image-container" className="w-full h-full bg-gradient-to-tl from-[--theme-color-bg] to-[--theme-color-bg-light] opacity-0">
+                        <div className="relative aspect-video">
+                            <Image src={receptionUrl ? receptionUrl : ReceptionImage}
+                                alt={`Reception`} fill sizes="100%" placeholder="blur"
+                                blurDataURL={ReceptionImage.blurDataURL}
+                                style={{ objectFit: "cover", objectPosition: "top" }} />
+                        </div>
+                    </div>
+                    <div className="absolute self-center text-center">
+                        <label htmlFor="reception-image-container" className="uppercase font-[AmedaRegular] sm:text-5xl max-sm:text-3xl text-center text-white">{RECEPTION_NAME}</label>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center w-full sm:px-10 gap-5">
+                    <div className="flex flex-col items-center w-full gap-5 text-center">
+                        <p className="font-[PoppinsLight] sm:text-2xl max-sm:text-lg">The <span className="italic font-bold">reception</span> will be held at</p>
+                        <div className="flex sm:max-xl:flex-col max-sm:flex-col items-center px-5 gap-5">
+                            <FaLocationDot className="text-5xl text-[--theme-color-bg-light]" />
+                            <address className="font-[PoppinsLight] font-bold sm:text-2xl max-sm:text-lg">
+                                {PROGRAM_SECTION_RECEPTION_ADDRESS}
+                            </address>
+                        </div>
+                        <Link href={PROGRAM_SECTION_RECEPTION_GMAPS_LINK} target="_blank" rel="noreferrer"
+                            className="w-max h-max p-4 font-[PoppinsLight] text-white text-nowrap bg-[--theme-color-bg-light] rounded-lg shadow-md shadow-black">
+                            View on Google Maps
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

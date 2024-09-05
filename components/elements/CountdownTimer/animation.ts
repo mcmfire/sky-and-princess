@@ -24,8 +24,8 @@ export const animateText = () => {
         stagger: 1,
         scrollTrigger: {
           trigger: "#bible-quote p",
-          start: "top 75%",
-          end: "bottom 60%",
+          start: "top 90%",
+          end: "bottom 80%",
           scrub: window.innerWidth > 1024 ? 1 : false,
         },
       });
