@@ -31,7 +31,7 @@ const Skills = () => {
                 <div className="shrink-0 sm:w-1/2 md:w-1/3 max-sm:w-full h-auto p-5 bg-white shadow-md shadow-black">
                     <div className="relative aspect-square">
                         <Image src={groomUrl ? groomUrl : GroomImage}
-                            alt={`${GROOM_NAME}Profile`} fill placeholder="blur"
+                            alt={`${GROOM_NAME}Profile`} fill sizes="100%" placeholder="blur"
                             blurDataURL={GroomImage.blurDataURL}
                             style={{ objectFit: "cover", objectPosition: "top" }} />
                     </div>
@@ -51,7 +51,7 @@ const Skills = () => {
                 <div className="shrink-0 sm:w-1/2 md:w-1/3 max-sm:w-full h-auto p-5 bg-white shadow-md shadow-black">
                     <div className="relative aspect-square">
                         <Image src={brideUrl ? brideUrl : BrideImage}
-                            alt={`${BRIDE_NAME}Profile`} fill placeholder="blur"
+                            alt={`${BRIDE_NAME}Profile`} fill sizes="100%" placeholder="blur"
                             blurDataURL={BrideImage.blurDataURL}
                             style={{ objectFit: "cover", objectPosition: "top" }} />
                     </div>

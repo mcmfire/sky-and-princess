@@ -1,5 +1,9 @@
 {
-    "default_sequence_code": ["1", "4", "3"],
+    "default_sequence_code": [
+        "1",
+        "4",
+        "3"
+    ],
     "groom": {
         "name": "Sky"
     },
@@ -17,8 +21,12 @@
         {
             "title": "Portfolio",
             "content": {
-                "about_us_content_one": "Welcome to Sky & Princess’ Love Story! Shoren, affectionately known as Sky, and Princess, lovingly called Cess, are excited to share their journey with you. From their first meeting [X years ago], they’ve cherished every moment together.",
-                "about_us_content_two": "Welcome to Sky & Princess’ Love Story! Shoren, affectionately known as Sky, and Princess, lovingly called Cess, are excited to share their journey with you. From their first meeting [X years ago], they’ve cherished every moment together.",
+                "about_us_contents": [
+                    "We are two souls stood at the crossroads of life, each on a path as different as night and day. One, a wanderer, unsure about love, career, and the future, constantly questioning the world around them. The other, a confident, career-oriented, strong independent, with high standards about love.",
+                    "Our journey began casually— over late-night coffee dates and drinks with friends, though one would only sip a bottle or two, and spontaneous travels with their close circle and them alone. These shared moments, light and carefree, slowly began to deepen. We are drawn to each other strengths and weakness, good and evil, and most of all POV's in life. As time passed, we decided to move in together, testing the depths of our relationship.",
+                    "We grew stronger, both as partners and as individuals.",
+                    "The wanderer had found peace in their uncertainty, and the strong independent woman realized that love didn’t mean compromising her strength. Together, they balanced each other—one offering steadfast confidence, the other embracing the beauty of life's unknowns. And on this day of 21st of October 2024, as they celebrate their 9th year anniversary, our souls bound to tie a knot at the same time with all our loved ones."
+                ],
                 "life_highlights": [
                     {
                         "title": "Opportunity Seekers",
@@ -79,127 +87,120 @@
                 "countdown_time": "2:00 PM",
                 "bible_quote_verse": "WHEN THE TIME IS RIGHT, I, THE LORD, WILL MAKE IT HAPPEN.",
                 "bible_quote_reference": "Isaiah 60:22",
-                "church_gmaps_qr_link": "https://maps.app.goo.gl/YMQ2nkHnTseVyUzb8",
-                "church_address": "Farconville Subd., Brgy. San Francisco, San Pablo City, Laguna",
-                "reception_gmaps_qr_link": "https://maps.app.goo.gl/jFyKuwTTw9v7KvEx7",
-                "reception_address": "0459 Purok 3 Sitio Balanga Barangay San Antonio 1, San Pablo City, Laguna",
-                "sponsors": [
+                "timeline": [
                     {
-                        "name": "FR. EDGAR CONSIGNADO",
-                        "role": "PRINCIPAL SPONSOR"
+                        "icon": "CHURCH",
+                        "title": "Ceremony",
+                        "time": "2:00 PM"
                     },
                     {
-                        "name": "DRA. DORY PAGLINAWAN",
-                        "role": "PRINCIPAL SPONSOR"
+                        "icon": "CAMERA",
+                        "title": "Photos",
+                        "time": "4:00 PM"
                     },
                     {
-                        "name": "VIVIAN ABEJA",
-                        "role": "PRINCIPAL SPONSOR"
+                        "icon": "RINGS",
+                        "title": "Couple Arrival",
+                        "time": "5:30 PM"
                     },
                     {
-                        "name": "JOEY & LOLIT ESTRELLADO",
-                        "role": "PRINCIPAL SPONSOR"
+                        "icon": "DINE",
+                        "title": "Dinner",
+                        "time": "6:30 PM"
                     },
                     {
-                        "name": "JAY & MAVIC PALICPIC",
-                        "role": "PRINCIPAL SPONSOR"
-                    },
-                    {
-                        "name": "NILO & CHERRY LANTO",
-                        "role": "PRINCIPAL SPONSOR"
-                    },
-                    {
-                        "name": "JIMMY & FE MASAKAYAN",
-                        "role": "PRINCIPAL SPONSOR"
-                    },
-                    {
-                        "name": "ARTHUR & AIDA GARCIA",
-                        "role": "PRINCIPAL SPONSOR"
-                    },
-                    {
-                        "name": "MARIETA & RONALD HERNANDEZ",
-                        "role": "PRINCIPAL SPONSOR"
+                        "icon": "PARTY",
+                        "title": "Party",
+                        "time": "9:00 PM"
                     }
                 ],
+                "church_gmaps_link": "https://maps.app.goo.gl/YMQ2nkHnTseVyUzb8",
+                "church_address": "Farconville Subd., Brgy. San Francisco, San Pablo City, Laguna",
+                "reception_gmaps_link": "https://maps.app.goo.gl/jFyKuwTTw9v7KvEx7",
+                "reception_address": "0459 Purok 3 Sitio Balanga Barangay San Antonio 1, San Pablo City, Laguna",
+                "dress_code": {
+                    "theme": "STRICTLY FORMAL",
+                    "gentlemen_attire": "Suit (or Long Sleeves) and Slacks",
+                    "ladies_attire": "Long Gown or Long Dress",
+                    "gentlemen_not_allowed_colors": "BEIGE or KHAKI",
+                    "ladies_not_allowed_colors": "WHITE",
+                    "ladies_colors": [
+                        {
+                            "label": "Red Coral",
+                            "color": "E31025"
+                        },
+                        {
+                            "label": "Poppy Red",
+                            "color": "D50017"
+                        },
+                        {
+                            "label": "Anemone",
+                            "color": "C40004"
+                        },
+                        {
+                            "label": "Red Cherry",
+                            "color": "910009"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "principal": [
+                        "FR. EDGAR CONSIGNADO",
+                        "DRA. DORY PAGLINAWAN",
+                        "VIVIAN ABEJA",
+                        "JOEY & LOLIT ESTRELLADO",
+                        "JAY & MAVIC PALICPIC",
+                        "NILO & CHERRY LANTO",
+                        "JIMMY & FE MASAKAYAN",
+                        "ARTHUR & AIDA GARCIA",
+                        "MARIETA & RONALD HERNANDEZ"
+                    ]
+                },
                 "entourage": {
-                    "tier_one": [
-                        {
-                            "name": "LUCAS XION MASAKAYAN",
-                            "role": "BESTMAN"
-                        },
-                        {
-                            "name": "PAM TUBANA-BUHAY",
-                            "role": "MATRON OF HONOR"
-                        }
+                    "bestman": [
+                        "LUCAS XION MASAKAYAN"
                     ],
-                    "tier_two": [
-                        {
-                            "name": "MARK ANTHONY BUAVE",
-                            "role": "GROOMSMAN"
-                        },
-                        {
-                            "name": "JAY MARTIN CHUMACERA",
-                            "role": "GROOMSMAN"
-                        },
-                        {
-                            "name": "NICOLE MALLORCA",
-                            "role": "BRIDESMAID"
-                        },
-                        {
-                            "name": "DYNNJEE SANCHEZ",
-                            "role": "BRIDESMAID"
-                        }
+                    "matron_of_honor": [
+                        "PAM TUBANA-BUHAY"
                     ],
-                    "tier_three": [
-                        {
-                            "name": "LORENZO GANABAN",
-                            "role": "CANDLE BEARER"
-                        },
-                        {
-                            "name": "KYLE DE LEON",
-                            "role": "CANDLE BEARER"
-                        },
-                        {
-                            "name": "CHRISTIAN LATOZA",
-                            "role": "VEIL BEARER"
-                        },
-                        {
-                            "name": "JEZ FELICIANO",
-                            "role": "VEIL BEARER"
-                        },
-                        {
-                            "name": "PATRICK VILLANUEVA",
-                            "role": "CORD BEARER"
-                        },
-                        {
-                            "name": "MONICA PARANGAT",
-                            "role": "CORD BEARER"
-                        }
+                    "groomsmen": [
+                        "MARK ANTHONY BUAVE",
+                        "JAY MARTIN CHUMACERA",
+                        "LORENZO GANABAN",
+                        "CHRISTIAN LATOZA",
+                        "PATRICK VILLANUEVA"
                     ],
-                    "tier_four": [
-                        {
-                            "name": "SHINKY ICASIAM",
-                            "role": "COIN BEARER"
-                        },
-                        {
-                            "name": "MC MASAKAYAN",
-                            "role": "RING BEARER"
-                        },
-                        {
-                            "name": "CHARISSE TUBAÑA",
-                            "role": "BIBLE BEARER"
-                        }
-                        
+                    "bridesmaids": [
+                        "NICOLE MALLORCA",
+                        "DYNNJEE SANCHEZ",
+                        "KYLE DE LEON",
+                        "JEZ FELICIANO",
+                        "MONICA PARANGAT"
                     ],
-                    "tier_five": [
-                        {
-                            "name": "JASPER VILLANUEVA",
-                            "role": "FLOWER BOY"
-                        },
-                        {
-                            "name": "JASTIN VILLANUEVA",
-                            "role": "FLOWER BOY"
-                        }
+                    "candle": [
+                        "LORENZO GANABAN",
+                        "KYLE DE LEON"
+                    ],
+                    "veil": [
+                        "CHRISTIAN LATOZA",
+                        "JEZ FELICIANO"
+                    ],
+                    "cord": [
+                        "PATRICK VILLANUEVA",
+                        "MONICA PARANGAT"
+                    ],
+                    "coin_bearer": [
+                        "SHINKY ICASIAM"
+                    ],
+                    "ring_bearer": [
+                        "MARC CHESTER MASAKAYAN"
+                    ],
+                    "bible_bearer": [
+                        "CHARISSE TUBAÑA"
+                    ],
+                    "flower_boy": [
+                        "JASPER VILLANUEVA",
+                        "JASTIN VILLANUEVA"
                     ]
                 }
             }
@@ -209,7 +210,97 @@
             "content": {
                 "rsvp_wedding_date": "October 21, 2024",
                 "rsvp_wedding_time": "2pm",
-                "rsvp_deadline": "September 15, 2024"
+                "rsvp_deadline": "September 28, 2024",
+                "rsvp_gift_message": "With all the blessings that God poured out on us, we cannot ask for more. Your presence and prayers are all we request. But if you desired to bless us, a monetary gift is one we suggest. It would be deeply appreciated.",
+                "faqs": [
+                    {
+                        "icon": "GIFT",
+                        "question": "Gift Guide",
+                        "answer": "As love is what the day is all about, your presence is one we can't celebrate without. But should you still believe that a gift is worth giving, a monetary gift for our future would be much appreciated."
+                    },
+                    {
+                        "icon": "ATTIRE",
+                        "question": "Attire Guide",
+                        "answer": "We hope our wedding will be a fun excuse for you to dress up and be fab! There is a color palette to comply with and we highly encourage everyone to dress up appropriately.",
+                        "footer": "**Strictly: NO slippers, NO Black and White dress, please. THANK YOU!**"
+                    },
+                    {
+                        "icon": "TIME",
+                        "question": "RSVP Deadline",
+                        "answer": "The last day to accept RSVPs is September 28, 2024."
+                    },
+                    {
+                        "icon": "VEHICLE",
+                        "question": "Is there parking space available for my car?",
+                        "answer": "Yes, there is parking available at the venue. However, please remember it's on a first-come, first-served basis, so you might not want to be late."
+                    },
+                    {
+                        "icon": "CONFIRM",
+                        "question": "I said \"YES\" to the RSVP but I had a change of plans.  What should I do?",
+                        "bullets": [
+                            "Please check with us first.",
+                            "Unfortunately, we have a strict guest list.",
+                            "Do not attend unannounced, as we may not have any available seats for you."
+                        ]
+                    },
+                    {
+                        "icon": "SKIP",
+                        "question": "Is it okay to skip the ceremony",
+                        "answer": "We would love you to arrive ON TIME as we put a lot of effort on planning this event."
+                    },
+                    {
+                        "icon": "LEAVE",
+                        "question": "When is the appropriate time to leave?",
+                        "answer": "This event took us 6 months to plan. We want you to have fun! Let's laugh, take pictures, make memories, and enjoy the party!",
+                        "footer": "**DO NOT EAT AND RUN!**"
+                    },
+                    {
+                        "icon": "KIDS",
+                        "question": "Can we bring our kids to the Wedding?",
+                        "answer": "This is a strict ADULT-ONLY event. As much as we'd love to celebrate with your kids, only those in the entourage and those specifically requested are invited to our wedding. We hope you understand and still enjoy the event."
+                    },
+                    {
+                        "icon": "HEART",
+                        "question": "How can I help the couple have a great time during their wedding?",
+                        "bullets": [
+                            "Pray with us for favorable weather and the continuous blessings of our Lord as we enter this new chapter of our lives as husband and wife.",
+                            "RSVP as soon as your schedule is cleared.",
+                            "Dress appropriately and follow our wedding motif.",
+                            "Be on time.",
+                            "Follow the seating arrangement in the reception.",
+                            "Stay until the end of the program.",
+                            "Join the activities and enjoy!"
+                        ]
+                    },
+                    {
+                        "icon": "PLUS ONE",
+                        "question": "May I invite a \"PLUS ONE\" to the event?",
+                        "answer": "As much as we would love to accommodate all our friends and family, we have a limited number of guests. Please understand that this event is strictly by invitation only. Kindly check our invitation to know the number of seats allotted for you.",
+                        "footer": "Guests not found on the guestlist provided to our coordinator will not be allowed to enter."
+                    },
+                    {
+                        "icon": "CANCEL",
+                        "question": "What if I RSVP'd but cannot attend?",
+                        "answer": "We would love to have you at our wedding, but we understand that there are circumstances beyond our control. However, please let us know as soon as possible so we can reallocate your seat/s. Give us a toast from afar."
+                    },
+                    {
+                        "icon": "SEAT",
+                        "question": "Can I sit anywhere at the reception?",
+                        "answer": "Please don't. It took us a lot of effort and discussion to finish the seating arrangement which is planned for everyone's convenience and network preference, but there is no need to worry! You'll surely be seated with your friends.",
+                        "footer": "Our coordinators will gladly assist you in finding your designated seat after registration. Feel free to ask them for assistance and they will gladly help you."
+                    },
+                    {
+                        "icon": "PHOTO",
+                        "question": "Am I allowed to take pictures and/or videos during the ceremony?",
+                        "answer": "We have but one plea, please keep our ceremony camera-free. Though our I Do's may be unplugged, our reception is not. So take as many photos and videos as you want during the party and don't forget to tag us.",
+                        "footer": "Please keep the aisle clear during the bridal entrance."
+                    },
+                    {
+                        "icon": "FORM",
+                        "question": "Do we really need to RSVP? We already said \"YES\" to the couple.",
+                        "answer": "Yes, please. We will be needing your formal RSVP to consolidate guest details and finalize the headcount for catering and seating purposes."
+                    }
+                ]
             }
         }
     ]

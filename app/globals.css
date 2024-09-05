@@ -18,9 +18,10 @@
 }
 
 :root {
-  --theme-color-fg: #DC2626;
-  --theme-color-bg: #0F172A;
-  --theme-color-bg-light: #1E293B;
+  --theme-color-fg: #0F172A;
+  --theme-color-fg-light: #1E293B;
+  --theme-color-bg: #B91C1C;
+  --theme-color-bg-light: #DC2626;
 }
 
 html {
@@ -29,7 +30,7 @@ html {
 
 body {
   @apply
-    text-[--theme-color-bg]
+    text-[--theme-color-fg]
     bg-white;
 }
 

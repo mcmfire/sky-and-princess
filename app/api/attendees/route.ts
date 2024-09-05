@@ -63,7 +63,7 @@ export async function POST(req: Request, res: NextResponse) {
             await kv.set('attendees', attendees);
         }
 
-        return Response.json({ name: name, isAttending: true });
+        return Response.json({ name: name, phone_number: phone_number, isAttending: true });
     }
     catch (error) {
         return Response.json({ message: 'Uh oh! Something went wrong. Please contact the admin.', error: error });

@@ -2,7 +2,7 @@
 
 import { gsap } from "@/lib/gsap";
 
-export const animateImage = (imageContainer: HTMLDivElement, imageContainerTitle: HTMLParagraphElement, side:string="right") => {
+export const animateImage = (imageContainer: HTMLDivElement, imageContainerTitle: HTMLLabelElement, side:string="right") => {
     let startPolygon: string = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 
     let endPolygon: string = window.innerWidth > 1024 ?
@@ -35,41 +35,4 @@ export const animateImage = (imageContainer: HTMLDivElement, imageContainerTitle
     });
 
     return { fadingInAnimation, clippingAnimation };
-};
-
-export const animateQRCode = (qrCodeContainer: HTMLDivElement) => {
-    const rotatingAnimation = gsap.to(qrCodeContainer, {
-        rotateX: 360,
-        rotateY: 360,
-        rotateZ: 360,
-        opacity: 1,
-        duration: 1,
-        ease: "linear",
-        scrollTrigger: {
-            trigger: qrCodeContainer,
-            start: "top 90%",
-            end: "bottom 80%",
-            scrub: window.innerWidth > 1024 ? 1 : false,
-        }
-    });
-
-    return rotatingAnimation;
-};
-
-export const animateCard = (cardsClass: string, cardsContainer: string) => {
-    const fadingInAnimation = gsap.fromTo(cardsClass, {
-        opacity: 0,
-    }, {
-        opacity: 1,
-        duration: window.innerWidth > 1024 ? 3 : 1,
-        stagger: window.innerWidth > 1024 ? 1 : 0.5,
-        scrollTrigger: {
-            trigger: cardsContainer,
-            start: "top 80%",
-            end: "bottom 90%",
-            scrub: window.innerWidth > 1024 ? 1 : false,
-        }
-    });
-
-    return fadingInAnimation;
 };

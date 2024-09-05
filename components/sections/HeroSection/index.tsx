@@ -43,7 +43,7 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
-            <Image src={HeroImage} alt="Hero" className="absolute w-full h-full" fill priority 
+            <Image src={HeroImage} alt="Hero" className="absolute w-full h-full" fill sizes="100vw" priority 
                 style={{objectFit: "cover", objectPosition: "center"}}/>
         </section>
     );
