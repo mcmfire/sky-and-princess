@@ -1,7 +1,8 @@
 import { FaCameraRetro, FaChurch } from "react-icons/fa";
-import { GiLinkedRings, GiPartyPopper } from "react-icons/gi";
+import { GiLinkedRings } from "react-icons/gi";
 import { IoRestaurant } from "react-icons/io5";
 import { PROGRAM_SECTION_TIMELINE } from "@/utils/constants";
+import { PiDiscoBallFill } from "react-icons/pi";
 
 const Timeline = () => {
     return (
@@ -17,7 +18,7 @@ const Timeline = () => {
                         {timeline.icon === "CAMERA" && <FaCameraRetro className="text-4xl text-[--theme-color-bg]" />}
                         {timeline.icon === "RINGS" && <GiLinkedRings className="text-4xl text-[--theme-color-bg]" />}
                         {timeline.icon === "DINE" && <IoRestaurant className="text-4xl text-[--theme-color-bg]" />}
-                        {timeline.icon === "PARTY" && <GiPartyPopper className="text-4xl text-[--theme-color-bg]" />}
+                        {timeline.icon === "PARTY" && <PiDiscoBallFill className="text-4xl text-[--theme-color-bg]" />}
                         <div className="flex flex-col">
                             <p className="font-[PoppinsLight] font-bold text-[--theme-color-bg]">
                                 <time dateTime="2024-09-05T14:00+08:00">

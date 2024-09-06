@@ -23,9 +23,10 @@
             "content": {
                 "about_us_contents": [
                     "We are two souls stood at the crossroads of life, each on a path as different as night and day. One, a wanderer, unsure about love, career, and the future, constantly questioning the world around them. The other, a confident, career-oriented, strong independent, with high standards about love.",
-                    "Our journey began casually— over late-night coffee dates and drinks with friends, though one would only sip a bottle or two, and spontaneous travels with their close circle and them alone. These shared moments, light and carefree, slowly began to deepen. We are drawn to each other strengths and weakness, good and evil, and most of all POV's in life. As time passed, we decided to move in together, testing the depths of our relationship.",
+                    "Our journey began casually— over late-night coffee dates and drinks with friends, though one would only sip a bottle or two, and spontaneous travels with our close circle of friends and us alone. These shared moments, light and carefree, slowly began to deepen. We are drawn to each other's strength and weakness, good and evil, and most of all POV's in life. As time passed, we decided to move in together, testing the depths of our relationship.",
                     "We grew stronger, both as partners and as individuals.",
-                    "The wanderer had found peace in their uncertainty, and the strong independent woman realized that love didn’t mean compromising her strength. Together, they balanced each other—one offering steadfast confidence, the other embracing the beauty of life's unknowns. And on this day of 21st of October 2024, as they celebrate their 9th year anniversary, our souls bound to tie a knot at the same time with all our loved ones."
+                    "The wanderer had found peace in their uncertainty, and the strong independent woman realized that love didn't mean compromising her strength. Together, we balanced each other—one offering steadfast confidence, the other embracing the beauty of life's unknowns.",
+                    "On the 21st of October 2024, as we celebrate our 9th year anniversary, we are bound to tie a knot at the same time with all our loved ones."
                 ],
                 "life_highlights": [
                     {
@@ -100,7 +101,7 @@
                     },
                     {
                         "icon": "RINGS",
-                        "title": "Couple Arrival",
+                        "title": "Reception Arrival",
                         "time": "5:30 PM"
                     },
                     {
@@ -134,12 +135,8 @@
                             "color": "D50017"
                         },
                         {
-                            "label": "Anemone",
+                            "label": "Cherry Red",
                             "color": "C40004"
-                        },
-                        {
-                            "label": "Red Cherry",
-                            "color": "910009"
                         }
                     ]
                 },
@@ -275,7 +272,7 @@
                     {
                         "icon": "PLUS ONE",
                         "question": "May I invite a \"PLUS ONE\" to the event?",
-                        "answer": "As much as we would love to accommodate all our friends and family, we have a limited number of guests. Please understand that this event is strictly by invitation only. Kindly check our invitation to know the number of seats allotted for you.",
+                        "answer": "As much as we would love to accommodate all our friends and family, we have a limited number of guests. Please understand that this event is strictly by invitation only.",
                         "footer": "Guests not found on the guestlist provided to our coordinator will not be allowed to enter."
                     },
                     {

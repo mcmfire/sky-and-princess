@@ -56,12 +56,11 @@ const Showcase = () => {
                     </div>
                 </div>
                 <hr className="w-3/4 my-20 border border-gray-300" />
-                <div className="flex flex-col items-center w-full h-auto gap-5">
+                <div className="flex flex-col items-center w-full h-auto px-5 gap-5">
                     <p className="italic font-[PoppinsLight] text-xl text-center">Play our favorite songs as you scroll down</p>
                     <iframe src={`https://open.spotify.com/embed/playlist/${SPOTIFY_PLAYLIST}?utm_source=generator&theme=0`}
-                        className="sm:w-3/4 max-sm:w-full h-92 sm:rounded-lg max-sm:rounded-none" title="Spotify Playlist"
+                        className="sm:w-3/4 max-sm:w-full h-92" title="Spotify Playlist"
                         width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media;" loading="lazy">
-
                     </iframe>
                 </div>
             </div>
