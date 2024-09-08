@@ -1,8 +1,11 @@
-import { useSearchParams } from "next/navigation";
-import { handlePhoneNumberChange, handleSubmitRSVP, handleUserAttendingStatus } from "./form";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { RSVP_DEADLINE, RSVP_WEDDING_DATE, RSVP_WEDDING_TIME } from "@/utils/constants";
+import { downloadFirebaseImage } from "@/utils/import";
+import NotFoundImage from "@/public/images/not-found.webp";
+import { handlePhoneNumberChange, handleSubmitRSVP, handleUserAttendingStatus } from "./form";
 
 const RSVPForm = () => {
     const searchParams = useSearchParams();
@@ -10,9 +13,16 @@ const RSVPForm = () => {
     const [showRSVPForm, setShowRSVPForm] = useState(false);
     const [rsvpAnswer, setRsvpAnswer] = useState("");
     const [userAttending, setUserAttending] = useState(false);
+    const [notFoundUrl, setNotFoundUrl] = useState("");
 
     const name = searchParams.get('name') || '';
     const phoneNumber = searchParams.get('phone_number') || '';
+
+    const fetchImageURL = async () => {
+        const notFoundImageURL = await downloadFirebaseImage("assets/not-found.gif");
+
+        setNotFoundUrl(notFoundImageURL);
+    };
 
     const getUserAttendingStatus = async (username: string) => {
         const user = await handleUserAttendingStatus(username);
@@ -42,6 +52,8 @@ const RSVPForm = () => {
         }
 
         if (username && !name) getUserAttendingStatus(username);
+
+        fetchImageURL();
     }, []);
 
     useEffect(() => {
@@ -79,7 +91,7 @@ const RSVPForm = () => {
             )}
             {(rsvpAnswer === "" && !userAttending) && (
                 <div className="flex flex-col items-center">
-                    <p className="w-full text-3xl text-center">&#129402;</p>
+                    <p className="w-full text-3xl text-center">&#128525;</p>
                     <p className="w-full text-3xl text-center">Are we fit for each other?</p>
                 </div>
             )}
@@ -92,7 +104,7 @@ const RSVPForm = () => {
             {rsvpAnswer === "No" && (
                 <div className="flex flex-col items-center">
                     <p className="w-full text-3xl text-center">&#128546;</p>
-                    <p className="w-full text-3xl text-center">Is that so?</p>
+                    <p className="w-full text-3xl text-center">Awww, sad</p>
                 </div>
             )}
             {!userAttending && (
@@ -133,11 +145,24 @@ const RSVPForm = () => {
                         </div>
                     )}
                     {rsvpAnswer === "No" && (
-                        <div className={`flex flex-col w-full gap-3`}>
-                            <button className="w-full py-3 bg-[--theme-color-bg-light] text-white rounded-lg shadow-md shadow-black"
-                                onClick={() => setRsvpAnswer("")}>
-                                Just Kidding
-                            </button>
+                        <div className={`flex flex-col items-center w-full gap-5`}>
+                            <div className="flex flex-col items-center w-full gap-5 text-center font-[PoppinsLight]">
+                                <div className="relative w-1/2" style={{ aspectRatio: 2 / 3 }}>
+                                    <Image src={notFoundUrl ? notFoundUrl : NotFoundImage} alt="NotFound" fill sizes="100%" style={{ objectFit: "cover", objectPosition: "top" }} unoptimized />
+                                </div>
+                                <p>
+                                    If you still wish us a happy wedding and help us fund our honeymoon, you can send us a monetary gift. &#128521;
+                                </p>
+                                <p>
+                                    Gifting section is located down below.
+                                </p>
+                            </div>
+                            <div className="flex flex-col w-full">
+                                <button className="w-full py-3 bg-[--theme-color-bg-light] text-white rounded-lg shadow-md shadow-black"
+                                    onClick={() => setRsvpAnswer("")}>
+                                    Just Kidding
+                                </button>
+                            </div>
                         </div>
                     )}
                 </div>

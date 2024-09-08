@@ -13,6 +13,7 @@
     "church_name": "St. Francis of Assisi Parish",
     "reception_name": "Paraiso de Avedad",
     "hashtag": "#princessturnsqueenofsky",
+    "preparation_time": "four years",
     "sections": [
         {
             "title": "Hero",
@@ -22,7 +23,7 @@
             "title": "Portfolio",
             "content": {
                 "about_us_contents": [
-                    "We are two souls stood at the crossroads of life, each on a path as different as night and day. One, a wanderer, unsure about love, career, and the future, constantly questioning the world around them. The other, a confident, career-oriented, strong independent, with high standards about love.",
+                    "We are two souls stood at the crossroads of life, each on a path as different as night and day. One, a wanderer, unsure about love, career, and the future, constantly questioning the world around him. The other, a confident, career-oriented, strong independent woman, with high standards about love.",
                     "Our journey began casually— over late-night coffee dates and drinks with friends, though one would only sip a bottle or two, and spontaneous travels with our close circle of friends and us alone. These shared moments, light and carefree, slowly began to deepen. We are drawn to each other's strength and weakness, good and evil, and most of all POV's in life. As time passed, we decided to move in together, testing the depths of our relationship.",
                     "We grew stronger, both as partners and as individuals.",
                     "The wanderer had found peace in their uncertainty, and the strong independent woman realized that love didn't mean compromising her strength. Together, we balanced each other—one offering steadfast confidence, the other embracing the beauty of life's unknowns.",
@@ -30,16 +31,13 @@
                 ],
                 "life_highlights": [
                     {
-                        "title": "Opportunity Seekers",
-                        "content": "Established a business in 2023 entitled Lux Apparel."
+                        "content": "Honeymoon in Hong Kong - Disneyland or Boracay"
                     },
                     {
-                        "title": "Professional Travelers",
-                        "content": "Traveled to numerous locations country-wide."
+                        "content": "House and Lot in Lucban"
                     },
                     {
-                        "title": "God Followers",
-                        "content": "Actively attending church and obeying God's will."
+                        "content": "Baby Girl/Boy"
                     }
                 ],
                 "groom_skills": [
@@ -121,9 +119,9 @@
                 "reception_address": "0459 Purok 3 Sitio Balanga Barangay San Antonio 1, San Pablo City, Laguna",
                 "dress_code": {
                     "theme": "STRICTLY FORMAL",
-                    "gentlemen_attire": "Suit (or Long Sleeves) and Slacks",
+                    "gentlemen_attire": "Suit or Long Sleeves and Slacks",
                     "ladies_attire": "Long Gown or Long Dress",
-                    "gentlemen_not_allowed_colors": "BEIGE or KHAKI",
+                    "gentlemen_not_allowed_colors": "",
                     "ladies_not_allowed_colors": "WHITE",
                     "ladies_colors": [
                         {
@@ -145,6 +143,7 @@
                         "FR. EDGAR CONSIGNADO",
                         "DRA. DORY PAGLINAWAN",
                         "VIVIAN ABEJA",
+                        "LAW LOZANO",
                         "JOEY & LOLIT ESTRELLADO",
                         "JAY & MAVIC PALICPIC",
                         "NILO & CHERRY LANTO",
@@ -165,7 +164,7 @@
                         "JAY MARTIN CHUMACERA",
                         "LORENZO GANABAN",
                         "CHRISTIAN LATOZA",
-                        "PATRICK VILLANUEVA"
+                        "PATRICK JANSEN VILLANUEVA"
                     ],
                     "bridesmaids": [
                         "NICOLE MALLORCA",
@@ -183,7 +182,7 @@
                         "JEZ FELICIANO"
                     ],
                     "cord": [
-                        "PATRICK VILLANUEVA",
+                        "PATRICK JANSEN VILLANUEVA",
                         "MONICA PARANGAT"
                     ],
                     "coin_bearer": [
@@ -208,7 +207,7 @@
                 "rsvp_wedding_date": "October 21, 2024",
                 "rsvp_wedding_time": "2pm",
                 "rsvp_deadline": "September 28, 2024",
-                "rsvp_gift_message": "With all the blessings that God poured out on us, we cannot ask for more. Your presence and prayers are all we request. But if you desired to bless us, a monetary gift is one we suggest. It would be deeply appreciated.",
+                "rsvp_gift_message": "With all the blessings that God poured out on us, we cannot ask for more. Your presence and prayers are all we request. But if you desire to bless us, a monetary gift is one we suggest. It would be deeply appreciated.",
                 "faqs": [
                     {
                         "icon": "GIFT",
