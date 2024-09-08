@@ -60,7 +60,7 @@ const Showcase = () => {
                     <p className="italic font-[PoppinsLight] text-xl text-center">Play our favorite songs as you scroll down</p>
                     <iframe src={`https://open.spotify.com/embed/playlist/${SPOTIFY_PLAYLIST}?utm_source=generator&theme=0`}
                         className="sm:w-3/4 max-sm:w-full h-92" title="Spotify Playlist"
-                        width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media;" loading="lazy">
+                        width="100%" height="352" allow="encrypted-media" loading="lazy">
                     </iframe>
                 </div>
             </div>

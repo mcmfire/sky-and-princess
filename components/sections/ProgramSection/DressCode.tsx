@@ -17,18 +17,16 @@ const DressCode = () => {
                     <div className="flex flex-col">
                         <p className="text-lg">
                             <span className="font-bold">For Gentlemen</span> - {PROGRAM_SECTION_DRESS_CODE_GENTLEMEN_ATTIRE}
-                            <span className=""> (Please do not wear {PROGRAM_SECTION_DRESS_CODE_GENTLEMEN_NOT_ALLOWED_COLORS})</span>
+                            <span className={`${PROGRAM_SECTION_DRESS_CODE_GENTLEMEN_NOT_ALLOWED_COLORS === "Color" ? "hidden" : ""}`}> (Please do not wear {PROGRAM_SECTION_DRESS_CODE_GENTLEMEN_NOT_ALLOWED_COLORS})</span>
                         </p>
                         <p className="text-lg">
                             <span className="font-bold">For Ladies</span> - {PROGRAM_SECTION_DRESS_CODE_LADIES_ATTIRE}
-                            <span className=""> (Please do not wear {PROGRAM_SECTION_DRESS_CODE_LADIES_NOT_ALLOWED_COLORS})</span>
+                            <span className={`${PROGRAM_SECTION_DRESS_CODE_LADIES_NOT_ALLOWED_COLORS === "Color" ? "hidden" : ""}`}> (Please do not wear {PROGRAM_SECTION_DRESS_CODE_LADIES_NOT_ALLOWED_COLORS})</span>
                         </p>
                     </div>
                     <div className="flex flex-col gap-5">
                         <p>
-                            For the
-                            <span className="font-bold"> ladies</span>
-                            , You may glam up in these shades but your smile is the best you can wear!
+                            For ladies and gentlemen, you may glam up in these shades but your smile is the best you can wear!
                         </p>
                         <div className="flex flex-wrap sm:max-lg:justify-center max-sm:justify-center gap-5">
                             {PROGRAM_SECTION_DRESS_CODE_LADIES_COLORS.map((color, index) => (

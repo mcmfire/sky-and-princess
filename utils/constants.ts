@@ -7,6 +7,7 @@ export const RECEPTION_NAME = Content.reception_name || "Reception Name";
 export const HASHTAG = Content.hashtag || "#Hashtag";
 export const SPOTIFY_PLAYLIST = process.env.NEXT_PUBLIC_SPOTIFY_PLAYLIST_URL || "Playlist";
 export const DISCORD_WEBHOOK = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || "Webhook";
+export const PREPARATION_TIME = Content.preparation_time || "four years";
 
 export const PORTFOLIO_SECTION_ABOUT_US_CONTENTS = Content.sections.find(section => section.title === 'Portfolio')?.content.about_us_contents || ["About Us Content 1"];
 export const PORTFOLIO_SECTION_LIFE_HIGHLIGHTS = Content.sections.find(section => section.title === 'Portfolio')?.content.life_highlights || [{
