@@ -56,8 +56,8 @@ const Timeline = () => {
             </div>
             <p className="px-5 font-[PoppinsLight] text-lg text-center">
                 It took us {PREPARATION_TIME} for this event to happen. 
-                We're hoping that you will arrive on time and enjoy this day with us up until the end. 
-                Let's have some fun and laugh together.
+                We&apos;re hoping that you will arrive on time and enjoy this day with us up until the end. 
+                Let&apos;s have some fun and laugh together.
             </p>
         </div>
     );
