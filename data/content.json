@@ -125,16 +125,16 @@
                     "ladies_not_allowed_colors": "WHITE",
                     "ladies_colors": [
                         {
-                            "label": "Red Coral",
-                            "color": "E31025"
+                            "label": "Salmon",
+                            "color": "FA8072"
                         },
                         {
-                            "label": "Poppy Red",
-                            "color": "D50017"
+                            "label": "Crimson",
+                            "color": "B80F0A"
                         },
                         {
-                            "label": "Cherry Red",
-                            "color": "C40004"
+                            "label": "Vermillon",
+                            "color": "7E191B"
                         }
                     ]
                 },

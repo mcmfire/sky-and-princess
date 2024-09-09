@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ShowcaseOneImage from "@/public/images/showcase-one.webp";
 import ShowcaseTwoImage from "@/public/images/showcase-two.webp";
@@ -9,6 +9,8 @@ import { SPOTIFY_PLAYLIST } from "@/utils/constants";
 
 
 const Showcase = () => {
+    const videoJournalRef = useRef<HTMLVideoElement>(null);
+    const videoMontageRef = useRef<HTMLVideoElement>(null);
     const [showcaseOneUrl, setShowcaseOneUrl] = useState("");
     const [showcaseTwoUrl, setShowcaseTwoUrl] = useState("");
 
@@ -20,8 +22,47 @@ const Showcase = () => {
         setShowcaseTwoUrl(showcaseTwoImageURL);
     };
 
+    function playJournalVideo() {
+        const videoJournal = videoJournalRef.current;
+
+        if (videoJournal && videoJournal.paused) {
+            videoJournal.play();
+        }
+    }
+
+    function playMontageVideo() {
+        const videoMontage = videoMontageRef.current;
+
+        if (videoMontage && videoMontage.paused) {
+            videoMontage.play();
+        }
+    }
+
     useEffect(() => {
+        const videoJournal = videoJournalRef.current;
+        const videoMontage = videoMontageRef.current;
+
+        if (videoJournal) {
+            if (videoJournal.paused) {
+                videoJournal.play();
+            }
+
+            videoJournal.addEventListener("loadedmetadata", playJournalVideo)
+        }
+        if (videoMontage) {
+            if (videoMontage.paused) {
+                videoMontage.play();
+            }
+
+            videoMontage.addEventListener("loadedmetadata", playMontageVideo)
+        }
+
         fetchImageURL();
+
+        return () => {
+            removeEventListener("loadedmetadata", playJournalVideo);
+            removeEventListener("loadedmetadata", playMontageVideo);
+        }
     }, []);
 
 
@@ -32,7 +73,7 @@ const Showcase = () => {
                 <div className="flex sm:w-1/2 max-sm:w-full h-auto">
                     <div className="flex flex-col w-1/2 h-full">
                         <div className="flex flex-1">
-                            <video preload="metadata" autoPlay loop muted disablePictureInPicture>
+                            <video ref={videoJournalRef} preload="auto" autoPlay loop muted disablePictureInPicture>
                                 <source src="/videos/journal.mp4" type="video/mp4" />
                             </video>
                         </div>
@@ -49,7 +90,7 @@ const Showcase = () => {
                                 style={{ objectFit: "cover", objectPosition: "top" }} />
                         </div>
                         <div className="flex flex-1">
-                            <video preload="metadata" autoPlay loop muted disablePictureInPicture>
+                            <video ref={videoMontageRef} preload="auto" autoPlay loop muted disablePictureInPicture>
                                 <source src="/videos/montage.mp4" type="video/mp4" />
                             </video>
                         </div>
