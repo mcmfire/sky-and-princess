@@ -4,7 +4,7 @@ import { BRIDE_NAME, GROOM_NAME } from '@/utils/constants';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${GROOM_NAME} & ${BRIDE_NAME} RSVP Website`,
-    short_name: `${GROOM_NAME} & ${BRIDE_NAME}`,
+    short_name: `${GROOM_NAME.charAt(0)}A${BRIDE_NAME.charAt(0)}`,
     description: `The official RSVP site for the wedding of ${GROOM_NAME} and ${BRIDE_NAME}.'`,
     start_url: '/',
     display: 'standalone',

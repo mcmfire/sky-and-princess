@@ -17,7 +17,8 @@ const FAQ = () => {
         <div className="flex flex-col items-center w-full mt-32 sm:px-20 max-sm:px-5 py-5 gap-5">
             <h3>FAQs</h3>
             {RSVP_FAQS.map((faq, index) => (
-                <details key={`faq-${index + 1}`} className="flex flex-col items-center w-full text-white rounded-lg shadow-md shadow-black cursor-pointer overflow-hidden" open={index === 0}
+                <details key={`faq-${index + 1}`} className="flex flex-col items-center w-full text-white rounded-lg shadow-md shadow-black cursor-pointer overflow-hidden" 
+                open={openedIndexes.includes(index)}
                     onToggle={() => setOpenedIndexes((prev) => {
                         if (prev.includes(index)) {
                             return prev.filter((i) => i !== index);

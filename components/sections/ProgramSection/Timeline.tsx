@@ -11,8 +11,8 @@ const Timeline = () => {
             <div className="flex justify-center w-full">
                 <div className="flex flex-1 flex-col justify-evenly pl-5 gap-10 border-r border-[--theme-color-bg]">
                     {PROGRAM_SECTION_TIMELINE.map((timeline, index) => (
-                        <div key={`timeline-${index + 1}`} id={`timeline-${timeline.title}`} className={`${!((index + 1) % 2 === 0) ? "flex" : "hidden"} flex-row-reverse items-center gap-5`}>
-                            <hr className={`"flex ${!((index + 1) % 2 === 0) ? "sm:w-32 max-sm:w-10" : "hidden"} border border-[--theme-color-bg]`} />
+                        <div key={`timeline-${index + 1}`} id={`timeline-${timeline.title.toLowerCase()}-${index + 1}`} className={`${!((index + 1) % 2 === 0) ? "flex" : "hidden"} flex-row-reverse items-center gap-5`}>
+                            <hr className={`"flex ${!((index + 1) % 2 === 0) ? "sm:w-32 max-sm:w-6" : "hidden"} border border-[--theme-color-bg]`} />
                             {timeline.icon === "CHURCH" && <FaChurch className="text-4xl text-[--theme-color-bg]" />}
                             {timeline.icon === "CAMERA" && <FaCameraRetro className="text-4xl text-[--theme-color-bg]" />}
                             {timeline.icon === "RINGS" && <GiLinkedRings className="text-4xl text-[--theme-color-bg]" />}
@@ -33,8 +33,8 @@ const Timeline = () => {
                 </div>
                 <div className="flex flex-1 flex-col justify-evenly pr-5 gap-10 border-l border-[--theme-color-bg]">
                     {PROGRAM_SECTION_TIMELINE.map((timeline, index) => (
-                        <div key={`timeline-${index + 1}`} id={`timeline-${timeline.title}`} className={`${(index + 1) % 2 === 0 ? "flex" : "hidden"} items-center gap-5`}>
-                            <hr className={`"flex ${(index + 1) % 2 === 0 ? "sm:w-32 max-sm:w-10" : "hidden"} border border-[--theme-color-bg]`} />
+                        <div key={`timeline-${index + 1}`} id={`timeline-${timeline.title.toLowerCase()}-${index + 1}`} className={`${(index + 1) % 2 === 0 ? "flex" : "hidden"} items-center gap-5`}>
+                            <hr className={`"flex ${(index + 1) % 2 === 0 ? "sm:w-32 max-sm:w-6" : "hidden"} border border-[--theme-color-bg]`} />
                             {timeline.icon === "CHURCH" && <FaChurch className="text-4xl text-[--theme-color-bg]" />}
                             {timeline.icon === "CAMERA" && <FaCameraRetro className="text-4xl text-[--theme-color-bg]" />}
                             {timeline.icon === "RINGS" && <GiLinkedRings className="text-4xl text-[--theme-color-bg]" />}
