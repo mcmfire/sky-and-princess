@@ -129,13 +129,17 @@ h3 {
 
   #phone-number {
     -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
   }
   #phone-number::-webkit-inner-spin-button {
     display: none;
   }
   #phone-number::-webkit-outer-spin-button,
   #phone-number::-webkit-inner-spin-button {
+    -moz-appearance: none;
     -webkit-appearance: none;
+    appearance: none;
     margin: 0;
   }
 }

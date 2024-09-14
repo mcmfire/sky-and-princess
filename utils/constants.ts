@@ -84,6 +84,8 @@ export const PROGRAM_SECTION_DRESS_CODE_LADIES_COLORS = Content.sections.find(se
     }
 ];
 export const PROGRAM_SECTION_ENTOURAGE_PRINCIPAL_SPONSORS = Content.sections.find(section => section.title === 'Program')?.content.sponsors?.principal || ["Sponsor"];
+export const PROGRAM_SECTION_ENTOURAGE_GROOM_PARENTS = Content.sections.find(section => section.title === 'Program')?.content.groom_parents || ["Father", "Mother"];
+export const PROGRAM_SECTION_ENTOURAGE_BRIDE_PARENTS = Content.sections.find(section => section.title === 'Program')?.content.bride_parents || ["Father", "Mother"];
 export const PROGRAM_SECTION_ENTOURAGE_BESTMAN = Content.sections.find(section => section.title === 'Program')?.content.entourage?.bestman || ["Bestman"];
 export const PROGRAM_SECTION_ENTOURAGE_MATRON_OF_HONOR = Content.sections.find(section => section.title === 'Program')?.content.entourage?.matron_of_honor || ["Matron of Honor"];
 export const PROGRAM_SECTION_ENTOURAGE_GROOMSMEN = Content.sections.find(section => section.title === 'Program')?.content.entourage?.groomsmen || ["Groomsman"];
