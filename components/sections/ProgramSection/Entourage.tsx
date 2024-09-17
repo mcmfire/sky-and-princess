@@ -22,18 +22,9 @@ const Entourage = () => {
                 <p className="italic font-serif text-2xl">To Stand as Witness To Our Vows</p>
                 <div className="flex flex-col w-full gap-20">
                     <div className="flex flex-col sm:justify-center max-sm:items-center w-full sm:gap-10 max-sm:gap-10">
-                        <div className="entourage-card flex flex-col items-center gap-3">
-                            <IoHeart className="text-8xl text-rose-500" />
-                            <div id="sponsor-container" className="flex flex-col justify-center w-full gap-3">
-                                <label htmlFor="sponsor-container" className="entourage-role font-bold text-xl">PRINCIPAL SPONSORS</label>
-                                {PROGRAM_SECTION_ENTOURAGE_PRINCIPAL_SPONSORS.map((sponsor, index) => (
-                                    <p key={`sponsor-${index}`} id={`${sponsor}-${index + 1}`} className="entourage-name mb-3 text-lg">{sponsor}</p>
-                                ))}
-                            </div>
-                        </div>
                         <div className="flex max-sm:flex-col sm:justify-center max-sm:items-center w-full sm:gap-20 max-sm:gap-10">
                             <div className="entourage-card flex flex-col items-center gap-3">
-                                <FaUserFriends className="text-8xl text-red-400" />
+                                <FaUserFriends className="text-8xl text-blue-900" />
                                 <div id="groom-parent-container" className="flex flex-col justify-center w-full gap-3">
                                     <label htmlFor="sponsor-container" className="entourage-role font-bold text-xl">GROOM&apos;S PARENTS</label>
                                     {PROGRAM_SECTION_ENTOURAGE_GROOM_PARENTS.map((parent, index) => (
@@ -42,13 +33,22 @@ const Entourage = () => {
                                 </div>
                             </div>
                             <div className="entourage-card flex flex-col items-center gap-3">
-                                <FaUserFriends className="text-8xl text-red-400" />
+                                <FaUserFriends className="text-8xl text-blue-900" />
                                 <div id="bride-parent-container" className="flex flex-col justify-center w-full gap-3">
                                     <label htmlFor="sponsor-container" className="entourage-role font-bold text-xl">BRIDE&apos;S PARENTS</label>
                                     {PROGRAM_SECTION_ENTOURAGE_BRIDE_PARENTS.map((parent, index) => (
                                         <p key={`bride-parent-${index}`} id={`${parent}-${index + 1}`} className="entourage-name mb-3 text-lg">{parent}</p>
                                     ))}
                                 </div>
+                            </div>
+                        </div>
+                        <div className="entourage-card flex flex-col items-center gap-3">
+                            <IoHeart className="text-8xl text-rose-500" />
+                            <div id="sponsor-container" className="flex flex-col justify-center w-full gap-3">
+                                <label htmlFor="sponsor-container" className="entourage-role font-bold text-xl">PRINCIPAL SPONSORS</label>
+                                {PROGRAM_SECTION_ENTOURAGE_PRINCIPAL_SPONSORS.map((sponsor, index) => (
+                                    <p key={`sponsor-${index}`} id={`${sponsor}-${index + 1}`} className="entourage-name mb-3 text-lg">{sponsor}</p>
+                                ))}
                             </div>
                         </div>
                     </div>
