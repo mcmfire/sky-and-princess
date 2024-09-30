@@ -8,7 +8,7 @@ const DressCode = () => {
         <div className="flex flex-col items-center w-full min-h-screen gap-10">
             <h3>Dress Code</h3>
             <div className="flex sm:max-lg:flex-col max-sm:flex-col sm:max-lg:items-center max-sm:items-center w-full h-full px-5 gap-5 font-[PoppinsLight]">
-                <Image src={AttireImage} alt="Attire" className="sm:w-1/4 sm:max-xl:w-1/3 max-sm:w-3/4 h-max" />
+                <Image src={AttireImage} alt="Attire" className="sm:w-1/4 sm:max-xl:w-1/3 max-sm:w-3/4 h-max" loading="lazy" />
                 <div className="flex flex-1 flex-col justify-between gap-3">
                     <div className="flex sm:max-lg:justify-center items-center gap-2">
                         <PiWarningCircle className="text-3xl text-red-500" />

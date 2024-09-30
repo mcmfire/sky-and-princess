@@ -79,14 +79,14 @@ const Showcase = () => {
                         </div>
                         <div className="showcase-image relative aspect-square">
                             <Image src={showcaseOneUrl ? showcaseOneUrl : ShowcaseOneImage} alt="ShowcaseOne" fill sizes="100%" placeholder="blur"
-                                blurDataURL={ShowcaseOneImage.blurDataURL}
+                                blurDataURL={ShowcaseOneImage.blurDataURL} loading="lazy"
                                 style={{ objectFit: "cover", objectPosition: "top" }} />
                         </div>
                     </div>
                     <div className="flex flex-col w-1/2 h-full">
                         <div className="showcase-image relative aspect-square">
                             <Image src={showcaseTwoUrl ? showcaseTwoUrl : ShowcaseTwoImage} alt="ShowcaseTwo" fill sizes="100%" placeholder="blur"
-                                blurDataURL={ShowcaseTwoImage.blurDataURL}
+                                blurDataURL={ShowcaseTwoImage.blurDataURL} loading="lazy"
                                 style={{ objectFit: "cover", objectPosition: "top" }} />
                         </div>
                         <div className="flex flex-1">

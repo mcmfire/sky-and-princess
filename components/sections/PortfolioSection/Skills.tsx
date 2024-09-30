@@ -32,7 +32,7 @@ const Skills = () => {
                     <div className="relative aspect-square">
                         <Image src={groomUrl ? groomUrl : GroomImage}
                             alt={`${GROOM_NAME}Profile`} fill sizes="100%" placeholder="blur"
-                            blurDataURL={GroomImage.blurDataURL}
+                            blurDataURL={GroomImage.blurDataURL} loading="lazy"
                             style={{ objectFit: "cover", objectPosition: "top" }} />
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const Skills = () => {
                     <div className="relative aspect-square">
                         <Image src={brideUrl ? brideUrl : BrideImage}
                             alt={`${BRIDE_NAME}Profile`} fill sizes="100%" placeholder="blur"
-                            blurDataURL={BrideImage.blurDataURL}
+                            blurDataURL={BrideImage.blurDataURL} loading="lazy"
                             style={{ objectFit: "cover", objectPosition: "top" }} />
                     </div>
                 </div>
