@@ -45,7 +45,7 @@ const AboutUs = () => {
                 <div ref={aboutUsImageContainerRef} className="shrink-0 sm:w-1/3 sm:max-xl:w-1/2 max-sm:w-full sm:h-1/3 sm:max-xl:h-1/2 max-sm:h-full p-5 bg-white shadow-sm shadow-black">
                     <div className="relative aspect-square">
                         <Image src={aboutUsUrl ? aboutUsUrl : AboutUsImage} alt="AboutUs" fill sizes="100%" placeholder="blur"
-                            blurDataURL={AboutUsImage.blurDataURL}
+                            blurDataURL={AboutUsImage.blurDataURL} loading="lazy"
                             style={{ objectFit: "cover", objectPosition: "top" }} />
                     </div>
                 </div>

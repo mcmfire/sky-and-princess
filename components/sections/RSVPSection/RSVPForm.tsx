@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import { RSVP_DEADLINE, RSVP_WEDDING_DATE, RSVP_WEDDING_TIME } from "@/utils/constants";
+import { RSVP_DEADLINE, RSVP_FORM_STATE, RSVP_WEDDING_DATE, RSVP_WEDDING_TIME } from "@/utils/constants";
 import { downloadFirebaseImage } from "@/utils/import";
 import NotFoundImage from "@/public/images/not-found.webp";
 import { handlePhoneNumberChange, handleSubmitRSVP, handleUserAttendingStatus } from "./form";
@@ -95,10 +95,16 @@ const RSVPForm = () => {
                     <p className="w-full text-3xl text-center">Are we fit for each other?</p>
                 </div>
             )}
-            {(rsvpAnswer === "Yes" && !userAttending) && (
+            {(rsvpAnswer === "Yes" && !userAttending && RSVP_FORM_STATE === "open") && (
                 <div className="flex flex-col items-center">
                     <p className="w-full text-3xl text-center">&#129321;</p>
                     <p className="w-full text-3xl text-center">Yay! Let&apos;s fill up the form to attend our wedding</p>
+                </div>
+            )}
+            {(rsvpAnswer === "Yes" && !userAttending && RSVP_FORM_STATE === "closed") && (
+                <div className="flex flex-col items-center">
+                    <p className="w-full text-3xl text-center">&#128515;</p>
+                    <p className="w-full text-3xl text-center">The RSVP form is now closed. Thank you for your interest. Please contact the couple directly if you were unable to confirm your RSVP.</p>
                 </div>
             )}
             {rsvpAnswer === "No" && (
@@ -119,7 +125,7 @@ const RSVPForm = () => {
                             NO
                         </button>
                     </div>
-                    {rsvpAnswer === "Yes" && (
+                    {rsvpAnswer === "Yes" && RSVP_FORM_STATE === "open" && (
                         <div id="rsvp-form-container" className="hidden flex-col self-center w-full rounded-lg border-2 border-gray-300 font-[PoppinsLight]">
                             <form className="flex flex-col w-full p-5 gap-5" onSubmit={handleSubmitRSVP}>
                                 <div className="flex flex-col gap-3">
@@ -144,14 +150,32 @@ const RSVPForm = () => {
                             </form>
                         </div>
                     )}
+                    {rsvpAnswer === "Yes" && RSVP_FORM_STATE === "closed" && (
+                        <div className={`flex flex-col items-center w-full gap-5`}>
+                            <div className="flex flex-col items-center w-full gap-5 text-center font-[PoppinsLight]">
+                                <p>
+                                    If you still wish us a happy wedding and help us fund our honeymoon, you can send us a monetary gift.&#128521;
+                                </p>
+                                <p>
+                                    Gifting section is located down below.
+                                </p>
+                            </div>
+                            <div className="flex flex-col w-full">
+                                <button className="w-full py-3 bg-[--theme-color-bg-light] text-white rounded-lg shadow-md shadow-black"
+                                    onClick={() => setRsvpAnswer("")}>
+                                    Go Back
+                                </button>
+                            </div>
+                        </div>
+                    )}
                     {rsvpAnswer === "No" && (
                         <div className={`flex flex-col items-center w-full gap-5`}>
                             <div className="flex flex-col items-center w-full gap-5 text-center font-[PoppinsLight]">
                                 <div className="relative w-1/2" style={{ aspectRatio: 2 / 3 }}>
-                                    <Image src={notFoundUrl ? notFoundUrl : NotFoundImage} alt="NotFound" fill sizes="100%" style={{ objectFit: "cover", objectPosition: "top" }} unoptimized />
+                                    <Image src={notFoundUrl ? notFoundUrl : NotFoundImage} alt="NotFound" fill sizes="100%" loading="lazy" style={{ objectFit: "cover", objectPosition: "top" }} unoptimized />
                                 </div>
                                 <p>
-                                    If you still wish us a happy wedding and help us fund our honeymoon, you can send us a monetary gift. &#128521;
+                                    If you still wish us a happy wedding and help us fund our honeymoon, you can send us a monetary gift.&#128521;
                                 </p>
                                 <p>
                                     Gifting section is located down below.
@@ -172,8 +196,6 @@ const RSVPForm = () => {
                 <p className="italic">RSVP Deadline: <time dateTime="2024-09-15T00:00+08:00">{RSVP_DEADLINE}</time></p>
             </div>
         </div>
-
-
     );
 };
 

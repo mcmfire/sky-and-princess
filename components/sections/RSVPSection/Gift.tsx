@@ -36,14 +36,14 @@ const Gift = () => {
                     <div className="flex flex-col w-full h-full text-center">
                         <label id="bride-wallet" className="font-[AmsterdamSignatureRegular] text-6xl">Bride&apos;s Wallet</label>
                         <div id="bride-wallet" className="relative rounded-lg shadow-md shadow-black overflow-hidden" style={{ aspectRatio: 2 / 3 }}>
-                            <Image src={brideWalletUrl ? brideWalletUrl : BrideWalletImage} alt="BrideWallet"
+                            <Image src={brideWalletUrl ? brideWalletUrl : BrideWalletImage} alt="BrideWallet" loading="lazy"
                                 placeholder="blur" blurDataURL={BrideWalletImage.blurDataURL} fill sizes="100%" style={{ objectFit: "cover" }} />
                         </div>
                     </div>
                     <div className="flex flex-col w-full h-full text-center">
                         <label htmlFor="groom-wallet" className="font-[AmsterdamSignatureRegular] text-6xl">Groom&apos;s Wallet</label>
                         <div id="groom-wallet" className="relative border rounded-lg shadow-md shadow-black overflow-hidden" style={{ aspectRatio: 2 / 3 }}>
-                            <Image src={groomWalletUrl ? groomWalletUrl : GroomWalletImage} alt="GroomWallet"
+                            <Image src={groomWalletUrl ? groomWalletUrl : GroomWalletImage} alt="GroomWallet" loading="lazy"
                                 placeholder="blur" blurDataURL={GroomWalletImage.blurDataURL} fill sizes="100%" style={{ objectFit: "cover" }} />
                         </div>
                     </div>

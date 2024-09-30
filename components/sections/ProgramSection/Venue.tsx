@@ -75,7 +75,7 @@ const Venue = () => {
                         <div className="relative aspect-video">
                             <Image src={churchUrl ? churchUrl : ChurchImage}
                                 alt={`Church`} fill sizes="100%" placeholder="blur"
-                                blurDataURL={ChurchImage.blurDataURL}
+                                blurDataURL={ChurchImage.blurDataURL} loading="lazy"
                                 style={{ objectFit: "cover", objectPosition: "top" }} />
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const Venue = () => {
                         <div className="relative aspect-video">
                             <Image src={receptionUrl ? receptionUrl : ReceptionImage}
                                 alt={`Reception`} fill sizes="100%" placeholder="blur"
-                                blurDataURL={ReceptionImage.blurDataURL}
+                                blurDataURL={ReceptionImage.blurDataURL} loading="lazy"
                                 style={{ objectFit: "cover", objectPosition: "top" }} />
                         </div>
                     </div>
