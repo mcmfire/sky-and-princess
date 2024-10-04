@@ -214,7 +214,7 @@
             "content": {
                 "rsvp_wedding_date": "October 21, 2024",
                 "rsvp_wedding_time": "2pm",
-                "rsvp_deadline": "September 28, 2024",
+                "rsvp_deadline": "October 13, 2024",
                 "rsvp_gift_message": "With all the blessings that God poured out on us, we cannot ask for more. Your presence and prayers are all we request. But if you desire to bless us, a monetary gift is one we suggest. It would be deeply appreciated.",
                 "faqs": [
                     {
@@ -231,7 +231,7 @@
                     {
                         "icon": "TIME",
                         "question": "RSVP Deadline",
-                        "answer": "The last day to accept RSVPs is September 28, 2024."
+                        "answer": "The last day to accept RSVPs is October 13, 2024."
                     },
                     {
                         "icon": "VEHICLE",
